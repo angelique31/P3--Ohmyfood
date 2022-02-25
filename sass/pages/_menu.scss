@@ -1,0 +1,275 @@
+@import "../base.scss/polices";
+@import "../utils.scss/mixins";
+@import "../utils.scss/variables";
+
+body{
+    list-style: none;
+    text-decoration: none;
+    margin: 0;
+    font-family: "Roboto", sans-serif;
+    background-color: #f6f6f6;
+}
+
+header{
+  .logo{
+    height: 40px;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 30px;//pour faire une marge entre le logo et l'image
+    position: relative;
+
+    .arrow{
+      position: absolute;
+      bottom: 2rem;
+      margin-left: 30px;//pour décaler la flèche du bord gauche de l'ecran
+      font-size: 25px;
+      color:black
+    }
+    h1{
+      font-family: 'Shrikhand', cursive;
+      text-align: center;
+      color: black;
+      margin-top: 0;/*pour enlever la marge automatique au dessus du h1*/
+    }
+    
+  }
+  
+} 
+.image1{
+  object-fit: cover;
+  width: 100%;
+  height: 400px;
+}
+
+.bordureMenu{
+  background-color: $grey;
+  margin-top: -20px;
+  border-radius: 25px 25px 0 0;
+  z-index: 1;//pour remonter la bordure par dessus l'image
+  position: relative;
+  margin-top: -4rem;//pour remonter la bordure par dessus l'image
+    h2{
+      font-family: 'Shrikhand', cursive, sans-serif;
+      font-size: 30px;
+      margin-left: 10px;//pour décaler le titre du bord
+      padding-top: 20px;//pour descendrele h2
+    }
+    .heart{
+      position: relative;
+      &__far{
+          position: absolute;
+          right: 1rem;/*pour mettre le coeur à droite*/
+          bottom: 1.8rem;
+          font-size: 30px;/*pour modifier la taille de l'icône qui est une font*/
+          color: rgb(104, 101, 101);
+        }  
+      &__fas{
+        color: transparent;
+        background-clip: text;
+        -webkit-background-clip: text;
+        position: absolute;
+        cursor: pointer;
+        right: 1rem;/*pour mettre le coeur à droite*/
+        bottom: 1.8rem;
+        font-size: 30px;/*pour modifier la taille de l'icône qui est une font*/
+            &:hover{
+            background-image: linear-gradient($secondary,$primary);
+          }
+      }
+    }
+}
+
+.menu{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);/*3 colonnes qui font toutes la même taille*/
+  gap: 1rem;
+}
+
+.menu-category{
+  overflow: hidden;
+}
+
+h3{
+ text-transform: uppercase;
+ border-bottom: solid 3px  #99E2D0;
+ width: 50px;
+ margin-left: 10px;//pour décaler le titre du bord
+}    
+
+.menu-item{
+  display: flex;
+  overflow: hidden;/*pour "cacher" le check qui est en dehors de la div*/
+  border-radius: 1rem;
+  box-shadow: 2px 1px 8px -3px $grey;
+  background-color: $white;
+  margin: 1rem;/* marge pour séparer les menus*/
+  cursor: pointer;
+  
+  &:hover  
+  .check{
+    background-color: #99E2D0;
+    border-radius: 0 1rem 1rem 0;
+    margin-right: -3rem; /*pour sortir le check de la div*/
+    width: 4rem;
+    margin-right: 0;
+    transition: all 1s;
+    display: grid;
+    place-items: center;
+    flex-shrink: 0;/*propriété qui interdit a l'élément de rétrécir*/
+    animation: slide-left 0.5s ease;
+    i::before{
+      content: "\f00c";
+      font-family: "Font Awesome 5 free";
+      font-weight: 900;
+      background: $white;
+      border-radius: 50%;
+      width: 2rem;
+      height: 2rem;
+      display: grid;
+      place-items: center;
+      color:#99E2D0;
+      animation: quatorspin 0.5s both;
+    
+    }
+  }
+}   
+.menuItemDescription{
+  padding: 1rem;/*pour que l'item check prenne bien la hauteur du parent menuItemDescription*/
+  overflow: hidden;
+
+    h4, p{
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+    white-space: nowrap;/*pour demander de ne pas aller à la ligne*/
+    text-overflow: ellipsis;/*pour faire apparaitre les ... au responsive mobile*/
+  }
+}
+
+
+
+.price{
+  margin-left: auto;/*pour mettre le prix a droite de la bordure*/
+  font-weight: 900;
+  padding: 1rem;
+  display: flex;/*pour descendre le prix en bas de la div. Il faut mettre un span car sinin le flex ne marche pas*/
+  align-items: flex-end;
+}
+
+@keyframes slide-left {
+  0% {
+            transform: scaleX(0);
+  }
+  100% {
+            transform: scaleX(-50px);
+  }
+}  
+
+
+
+
+
+@keyframes quatorspin{
+  0%{
+    transform: rotate(180deg);
+  }
+  100%{
+    transform: rotate(0);
+  }
+}
+
+.order button {
+  padding: 15px;
+  border-radius: 30px;
+  border: transparent;
+  color: $white;
+  font-weight: 500;
+  font-size: 15px;
+  background: linear-gradient($secondary,$primary);
+  cursor: pointer;
+  transition: background-color 1s;
+  box-shadow: 0 0 10px 0;
+  margin-top: 20px;//pour décaler le bouton du haut
+  transition: 1s;
+  &:hover{
+    opacity: 0.8;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.445);
+  }
+}
+
+.order{
+  display: flex;/*pour centrer le bouton*/
+  justify-content: center;
+  align-items: center;
+}
+
+
+/*animation pour faire apparaitre progressivement les menus*/
+@keyframes appear{/*animation pour le menu-item, faire apparaitre progressivement les menus*/
+  0%{
+    transform: scale(0);
+  
+  }
+  100%{
+    transform: scale(1);
+    
+  }
+}
+
+.menu-item{
+  animation: appear .6s;
+}
+
+.delay-1{
+  animation-delay: .1s; /*définit la durée d'attente avant de démarrer une animation*/ 
+}
+
+.delay-2{
+  animation-delay: .2s;
+}
+
+.delay-3{
+  animation-delay: .3s;
+}
+/*Fin d'animation pour les menus*/
+
+/*Footer*/
+
+footer{
+  margin-top: 20px;//pour séparer le footer du bouton
+  background-color: rgb(68, 67, 67);
+  height: 300px;
+  color: $white;
+  padding-top: 10px;
+  padding-left: 20px;
+  }
+  
+  h5{
+  font-family: 'Shrikhand', cursive, sans-serif;
+  }
+  
+  .ustensil{
+    display: flex;
+    align-items: center;
+        p{
+            margin-left: 20px;
+        }
+  }
+  
+  .hands{
+  display: flex;
+  align-items: center;
+;   p{
+      margin-left: 20px;
+    }
+  }
+  
+  @media screen and (max-width:1000px){
+    .menu{
+      grid-template-columns: 1fr;
+      width: 100%;
+    }
+    h2{
+      font-size: 15px;
+    }
+  }

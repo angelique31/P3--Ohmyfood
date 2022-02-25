@@ -1,0 +1,575 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
+body {
+  list-style: none;
+  text-decoration: 0;
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+}
+
+header {
+  box-shadow: 5px 5px 5px 1px #bbb9b9;
+  padding: 0px 0;
+  position: relative;
+}
+
+h1 {
+  font-family: "Shrikhand", cursive;
+  text-align: center;
+  margin-bottom: 0;
+}
+
+.map {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #f5f3f3;
+  width: 100%;
+  height: 60px;
+}
+.map p {
+  margin-left: 10px;
+  /*pour décaler l'icone map du texte*/
+  font-weight: 800;
+  font-size: 1.2rem;
+}
+
+.section1 {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  background: #fdfbfb;
+  height: 200px;
+}
+.section1 p {
+  font-size: 15px;
+}
+.section1 button {
+  padding: 15px;
+  border-radius: 30px;
+  border: transparent;
+  color: white;
+  font-weight: 500;
+  font-size: 15px;
+  background: linear-gradient(#FF79DA, #9356DC);
+  cursor: pointer;
+  transition: 1s;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.212);
+}
+.section1 button:hover {
+  opacity: 0.8;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.445);
+}
+
+.section2__title {
+  text-align: center;
+}
+.section2__flex {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.section2__flex--icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 50px 0 30px;
+  background-color: #f5f3f3;
+  border-radius: 15px;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.212);
+  position: relative;
+  /*pour mettre le span en position absolute*/
+  cursor: pointer;
+  transition: 0.5s;
+}
+.section2__flex--icon:hover {
+  opacity: 0.7;
+}
+.section2 .fa-mobile-alt, .section2 .fa-list-ul, .section2 .fa-store {
+  margin-right: 15px;
+}
+.section2 span {
+  color: white;
+  height: 25px;
+  width: 25px;
+  background-color: #9356DC;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  left: -15px;
+}
+@media screen and (max-width: 1028px) {
+  .section2 h2 {
+    font-size: 1.5rem;
+  }
+  .section2 .section2__flex {
+    flex-direction: column;
+    margin-top: 20px;
+  }
+  .section2 .section2__flex--icon {
+    margin-bottom: 20px;
+  }
+}
+@media screen and (max-width: 533px) {
+  .section2 h2 {
+    margin-right: 150px;
+  }
+}
+
+.section3 {
+  background-color: #f5f3f3;
+  height: 700px;
+}
+.section3__title {
+  padding-top: 50px;
+  text-align: center;
+}
+.section3__flex {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.section3__flex--bordureMenu {
+  border: 2px solid white;
+  border-radius: 20px;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.212);
+  background-color: white;
+  width: 350px;
+  height: 280px;
+  margin-bottom: 20px;
+  /*pour espacer les cartes*/
+  margin-right: 20px;
+  /*pour espacer les cartes*/
+  position: relative;
+  /*pour l'icone "new"*/
+}
+.section3__flex--bordureMenu .image1, .section3__flex--bordureMenu .image2, .section3__flex--bordureMenu .image3, .section3__flex--bordureMenu .image4 {
+  object-fit: cover;
+  width: 350px;
+  height: 200px;
+  border-radius: 20px 20px 0 0;
+}
+.section3__flex--bordureMenu:hover {
+  cursor: pointer;
+}
+.section3__flex--bordureMenu .new {
+  position: absolute;
+  right: 1rem;
+  /*pour mettre l'icone "nouveau" à droite de l'image*/
+  top: 0.1rem;
+  /*pour mettre l'icone "nouveau" en hautde l'image*/
+  padding: 5px;
+  background-color: #99E2D0;
+}
+.section3__flex--bordureMenu .textImage {
+  margin-left: 15px;
+}
+.section3__flex--bordureMenu h4 {
+  line-height: 2px;
+}
+.section3__flex--bordureMenu .heart {
+  position: relative;
+}
+.section3__flex--bordureMenu .heart__far {
+  position: absolute;
+  right: 1rem;
+  /*pour mettre le coeur à droite*/
+  bottom: 1.8rem;
+  font-size: 30px;
+  /*pour modifier la taille de l'icône qui est une font*/
+  color: #686565;
+}
+.section3__flex--bordureMenu .heart__fas {
+  color: transparent;
+  background-clip: text;
+  /*L'arrière-plan se limite au texte au premier-plan.*/
+  -webkit-background-clip: text;
+  position: absolute;
+  cursor: pointer;
+  right: 1rem;
+  /*pour mettre le coeur à droite*/
+  bottom: 1.8rem;
+  font-size: 30px;
+  /*pour modifier la taille de l'icône qui est une font*/
+}
+.section3__flex--bordureMenu .heart__fas:hover {
+  background-image: linear-gradient(#FF79DA, #9356DC);
+}
+
+@media screen and (max-width: 1028px) {
+  .section3__title {
+    font-size: 1.5rem;
+  }
+
+  .section3 {
+    padding-bottom: 600px;
+  }
+}
+@media screen and (max-width: 533px) {
+  .section3__title {
+    margin-right: 240px;
+  }
+}
+footer {
+  background-color: #444343;
+  height: 250px;
+  color: white;
+  padding-top: 10px;
+  padding-left: 20px;
+}
+
+h5 {
+  font-family: "Shrikhand", cursive, sans-serif;
+}
+
+.ustensil {
+  display: flex;
+  align-items: center;
+}
+.ustensil p {
+  margin-left: 15px;
+  /*pour espacer l'icone du mot*/
+}
+
+.hands {
+  display: flex;
+  align-items: center;
+}
+.hands p {
+  margin-left: 15px;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+/*page loader*/
+.loader {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f2f2f2;
+  height: 100vh;
+  inset: 0;
+  z-index: 1;
+  /*pour positionner la page par dessus la page restaurant*/
+  opacity: 0.9;
+  /*pour voir la page retaurant a travers la page du dessus*/
+  animation: disappear 1s;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  /*une fois que l'animation est terminée, il ne revient pas a son point de départ*/
+  animation-delay: 2s;
+  /* correspond au temps que met le spin avant de disparaitre*/
+  transform-origin: top;
+}
+
+@keyframes disappear {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
+.loader::after {
+  content: "";
+  height: 100px;
+  width: 100px;
+  border-top: 5px solid #FF79DA;
+  border-bottom: 5px solid #9356DC;
+  border-right: 5px solid #99E2D0;
+  border-left: 5px solid #99E2D0;
+  border-radius: 50%;
+  animation: spin 2s infinite linear;
+  animation-duration: 1s;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(360deg);
+  }
+  100% {
+    transform: rotate(0);
+  }
+}
+/*Fin de page loader*/
+body {
+  list-style: none;
+  text-decoration: none;
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+  background-color: #f6f6f6;
+}
+
+header .logo {
+  height: 40px;
+  text-align: center;
+  padding-top: 10px;
+  padding-bottom: 30px;
+  position: relative;
+}
+header .logo .arrow {
+  position: absolute;
+  bottom: 2rem;
+  margin-left: 30px;
+  font-size: 25px;
+  color: black;
+}
+header .logo h1 {
+  font-family: "Shrikhand", cursive;
+  text-align: center;
+  color: black;
+  margin-top: 0;
+  /*pour enlever la marge automatique au dessus du h1*/
+}
+
+.image1 {
+  object-fit: cover;
+  width: 100%;
+  height: 400px;
+}
+
+.bordureMenu {
+  background-color: #f5f3f3;
+  margin-top: -20px;
+  border-radius: 25px 25px 0 0;
+  z-index: 1;
+  position: relative;
+  margin-top: -4rem;
+}
+.bordureMenu h2 {
+  font-family: "Shrikhand", cursive, sans-serif;
+  font-size: 30px;
+  margin-left: 10px;
+  padding-top: 20px;
+}
+.bordureMenu .heart {
+  position: relative;
+}
+.bordureMenu .heart__far {
+  position: absolute;
+  right: 1rem;
+  /*pour mettre le coeur à droite*/
+  bottom: 1.8rem;
+  font-size: 30px;
+  /*pour modifier la taille de l'icône qui est une font*/
+  color: #686565;
+}
+.bordureMenu .heart__fas {
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  position: absolute;
+  cursor: pointer;
+  right: 1rem;
+  /*pour mettre le coeur à droite*/
+  bottom: 1.8rem;
+  font-size: 30px;
+  /*pour modifier la taille de l'icône qui est une font*/
+}
+.bordureMenu .heart__fas:hover {
+  background-image: linear-gradient(#FF79DA, #9356DC);
+}
+
+.menu {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  /*3 colonnes qui font toutes la même taille*/
+  gap: 1rem;
+}
+
+.menu-category {
+  overflow: hidden;
+}
+
+h3 {
+  text-transform: uppercase;
+  border-bottom: solid 3px #99E2D0;
+  width: 50px;
+  margin-left: 10px;
+}
+
+.menu-item {
+  display: flex;
+  overflow: hidden;
+  /*pour "cacher" le check qui est en dehors de la div*/
+  border-radius: 1rem;
+  box-shadow: 2px 1px 8px -3px #f5f3f3;
+  background-color: white;
+  margin: 1rem;
+  /* marge pour séparer les menus*/
+  cursor: pointer;
+}
+.menu-item:hover .check {
+  background-color: #99E2D0;
+  border-radius: 0 1rem 1rem 0;
+  margin-right: -3rem;
+  /*pour sortir le check de la div*/
+  width: 4rem;
+  margin-right: 0;
+  transition: all 1s;
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  /*propriété qui interdit a l'élément de rétrécir*/
+  animation: slide-left 0.5s ease;
+}
+.menu-item:hover .check i::before {
+  content: "\f00c";
+  font-family: "Font Awesome 5 free";
+  font-weight: 900;
+  background: white;
+  border-radius: 50%;
+  width: 2rem;
+  height: 2rem;
+  display: grid;
+  place-items: center;
+  color: #99E2D0;
+  animation: quatorspin 0.5s both;
+}
+
+.menuItemDescription {
+  padding: 1rem;
+  /*pour que l'item check prenne bien la hauteur du parent menuItemDescription*/
+  overflow: hidden;
+}
+.menuItemDescription h4, .menuItemDescription p {
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  /*pour demander de ne pas aller à la ligne*/
+  text-overflow: ellipsis;
+  /*pour faire apparaitre les ... au responsive mobile*/
+}
+
+.price {
+  margin-left: auto;
+  /*pour mettre le prix a droite de la bordure*/
+  font-weight: 900;
+  padding: 1rem;
+  display: flex;
+  /*pour descendre le prix en bas de la div. Il faut mettre un span car sinin le flex ne marche pas*/
+  align-items: flex-end;
+}
+
+@keyframes slide-left {
+  0% {
+    transform: scaleX(0);
+  }
+  100% {
+    transform: scaleX(-50px);
+  }
+}
+@keyframes quatorspin {
+  0% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(0);
+  }
+}
+.order button {
+  padding: 15px;
+  border-radius: 30px;
+  border: transparent;
+  color: white;
+  font-weight: 500;
+  font-size: 15px;
+  background: linear-gradient(#FF79DA, #9356DC);
+  cursor: pointer;
+  transition: background-color 1s;
+  box-shadow: 0 0 10px 0;
+  margin-top: 20px;
+  transition: 1s;
+}
+.order button:hover {
+  opacity: 0.8;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.445);
+}
+
+.order {
+  display: flex;
+  /*pour centrer le bouton*/
+  justify-content: center;
+  align-items: center;
+}
+
+/*animation pour faire apparaitre progressivement les menus*/
+@keyframes appear {
+  /*animation pour le menu-item, faire apparaitre progressivement les menus*/
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.menu-item {
+  animation: appear 0.6s;
+}
+
+.delay-1 {
+  animation-delay: 0.1s;
+  /*définit la durée d'attente avant de démarrer une animation*/
+}
+
+.delay-2 {
+  animation-delay: 0.2s;
+}
+
+.delay-3 {
+  animation-delay: 0.3s;
+}
+
+/*Fin d'animation pour les menus*/
+/*Footer*/
+footer {
+  margin-top: 20px;
+  background-color: #444343;
+  height: 300px;
+  color: white;
+  padding-top: 10px;
+  padding-left: 20px;
+}
+
+h5 {
+  font-family: "Shrikhand", cursive, sans-serif;
+}
+
+.ustensil {
+  display: flex;
+  align-items: center;
+}
+.ustensil p {
+  margin-left: 20px;
+}
+
+.hands {
+  display: flex;
+  align-items: center;
+}
+.hands p {
+  margin-left: 20px;
+}
+
+@media screen and (max-width: 1000px) {
+  .menu {
+    grid-template-columns: 1fr;
+    width: 100%;
+  }
+
+  h2 {
+    font-size: 15px;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
