@@ -306,7 +306,7 @@ body {
   text-decoration: none;
   margin: 0;
   font-family: "Roboto", sans-serif;
-  background-color: #f6f6f6;
+  background-color: #f5f3f3;
 }
 
 header .logo {
@@ -339,7 +339,6 @@ header .logo h1 {
 
 .bordureMenu {
   background-color: #f5f3f3;
-  margin-top: -20px;
   border-radius: 25px 25px 0 0;
   z-index: 1;
   position: relative;
@@ -383,18 +382,16 @@ header .logo h1 {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   /*3 colonnes qui font toutes la même taille*/
-  gap: 1rem;
 }
 
 .menu-category {
   overflow: hidden;
 }
-
-h3 {
+.menu-category h3 {
   text-transform: uppercase;
   border-bottom: solid 3px #99E2D0;
   width: 50px;
-  margin-left: 10px;
+  margin-left: 20px;
 }
 
 .menu-item {
@@ -402,9 +399,9 @@ h3 {
   overflow: hidden;
   /*pour "cacher" le check qui est en dehors de la div*/
   border-radius: 1rem;
-  box-shadow: 2px 1px 8px -3px #f5f3f3;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.212);
   background-color: white;
-  margin: 1rem;
+  margin: 20px;
   /* marge pour séparer les menus*/
   cursor: pointer;
 }
@@ -416,8 +413,9 @@ h3 {
   width: 4rem;
   margin-right: 0;
   transition: all 1s;
-  display: grid;
-  place-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   flex-shrink: 0;
   /*propriété qui interdit a l'élément de rétrécir*/
   animation: slide-left 0.5s ease;
@@ -430,18 +428,19 @@ h3 {
   border-radius: 50%;
   width: 2rem;
   height: 2rem;
-  display: grid;
-  place-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   color: #99E2D0;
   animation: quatorspin 0.5s both;
 }
 
-.menuItemDescription {
+.menu-item-text {
   padding: 1rem;
   /*pour que l'item check prenne bien la hauteur du parent menuItemDescription*/
   overflow: hidden;
 }
-.menuItemDescription h4, .menuItemDescription p {
+.menu-item-text h4, .menu-item-text p {
   padding: 0;
   margin: 0;
   overflow: hidden;
@@ -487,7 +486,7 @@ h3 {
   background: linear-gradient(#FF79DA, #9356DC);
   cursor: pointer;
   transition: background-color 1s;
-  box-shadow: 0 0 10px 0;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.212);
   margin-top: 20px;
   transition: 1s;
 }
@@ -540,25 +539,17 @@ footer {
   padding-top: 10px;
   padding-left: 20px;
 }
-
-h5 {
+footer h5 {
   font-family: "Shrikhand", cursive, sans-serif;
+  font-size: 1.5rem;
 }
-
-.ustensil {
+footer .ustensil {
   display: flex;
   align-items: center;
 }
-.ustensil p {
-  margin-left: 20px;
-}
-
-.hands {
+footer .hands {
   display: flex;
   align-items: center;
-}
-.hands p {
-  margin-left: 20px;
 }
 
 @media screen and (max-width: 1000px) {

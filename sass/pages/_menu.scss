@@ -7,7 +7,7 @@ body{
     text-decoration: none;
     margin: 0;
     font-family: "Roboto", sans-serif;
-    background-color: #f6f6f6;
+    background-color: $grey;
 }
 
 header{
@@ -25,12 +25,12 @@ header{
       font-size: 25px;
       color:black
     }
-    h1{
+      h1{
       font-family: 'Shrikhand', cursive;
       text-align: center;
       color: black;
       margin-top: 0;/*pour enlever la marge automatique au dessus du h1*/
-    }
+      }
     
   }
   
@@ -43,7 +43,7 @@ header{
 
 .bordureMenu{
   background-color: $grey;
-  margin-top: -20px;
+  // margin-top: -20px;
   border-radius: 25px 25px 0 0;
   z-index: 1;//pour remonter la bordure par dessus l'image
   position: relative;
@@ -82,62 +82,55 @@ header{
 .menu{
   display: grid;
   grid-template-columns: repeat(3, 1fr);/*3 colonnes qui font toutes la même taille*/
-  gap: 1rem;
 }
 
 .menu-category{
   overflow: hidden;
+    h3{
+      text-transform: uppercase;
+      border-bottom: solid 3px  $tertiary;
+      width: 50px;
+      margin-left: 20px;//pour décaler le titre du bord
+    }    
 }
-
-h3{
- text-transform: uppercase;
- border-bottom: solid 3px  #99E2D0;
- width: 50px;
- margin-left: 10px;//pour décaler le titre du bord
-}    
-
 .menu-item{
   display: flex;
   overflow: hidden;/*pour "cacher" le check qui est en dehors de la div*/
   border-radius: 1rem;
-  box-shadow: 2px 1px 8px -3px $grey;
-  background-color: $white;
-  margin: 1rem;/* marge pour séparer les menus*/
+  @include boxShadow;
+  background-color:$white;
+  margin: 20px;/* marge pour séparer les menus*/
   cursor: pointer;
-  
   &:hover  
-  .check{
-    background-color: #99E2D0;
-    border-radius: 0 1rem 1rem 0;
-    margin-right: -3rem; /*pour sortir le check de la div*/
-    width: 4rem;
-    margin-right: 0;
-    transition: all 1s;
-    display: grid;
-    place-items: center;
-    flex-shrink: 0;/*propriété qui interdit a l'élément de rétrécir*/
-    animation: slide-left 0.5s ease;
-    i::before{
-      content: "\f00c";
-      font-family: "Font Awesome 5 free";
-      font-weight: 900;
-      background: $white;
-      border-radius: 50%;
-      width: 2rem;
-      height: 2rem;
-      display: grid;
-      place-items: center;
-      color:#99E2D0;
-      animation: quatorspin 0.5s both;
+    .check{
+      background-color: $tertiary;
+      border-radius: 0 1rem 1rem 0;
+      margin-right: -3rem; /*pour sortir le check de la div*/
+      width: 4rem;
+      margin-right: 0;
+      transition: all 1s;
+      @include flexCenter;
+      flex-shrink: 0;/*propriété qui interdit a l'élément de rétrécir*/
+      animation: slide-left 0.5s ease;
+        i::before{
+        content: "\f00c";
+        font-family: "Font Awesome 5 free";
+        font-weight: 900;
+        background: $white;
+        border-radius: 50%;
+        width: 2rem;
+        height: 2rem;
+        @include flexCenter;
+        color: $tertiary;
+        animation: quatorspin 0.5s both;
     
+      }
     }
-  }
 }   
-.menuItemDescription{
+.menu-item-text{
   padding: 1rem;/*pour que l'item check prenne bien la hauteur du parent menuItemDescription*/
   overflow: hidden;
-
-    h4, p{
+  h4, p{
     padding: 0;
     margin: 0;
     overflow: hidden;
@@ -145,8 +138,6 @@ h3{
     text-overflow: ellipsis;/*pour faire apparaitre les ... au responsive mobile*/
   }
 }
-
-
 
 .price{
   margin-left: auto;/*pour mettre le prix a droite de la bordure*/
@@ -164,10 +155,6 @@ h3{
             transform: scaleX(-50px);
   }
 }  
-
-
-
-
 
 @keyframes quatorspin{
   0%{
@@ -188,7 +175,7 @@ h3{
   background: linear-gradient($secondary,$primary);
   cursor: pointer;
   transition: background-color 1s;
-  box-shadow: 0 0 10px 0;
+  @include boxShadow;
   margin-top: 20px;//pour décaler le bouton du haut
   transition: 1s;
   &:hover{
@@ -234,7 +221,6 @@ h3{
 /*Fin d'animation pour les menus*/
 
 /*Footer*/
-
 footer{
   margin-top: 20px;//pour séparer le footer du bouton
   background-color: rgb(68, 67, 67);
@@ -242,27 +228,20 @@ footer{
   color: $white;
   padding-top: 10px;
   padding-left: 20px;
-  }
-  
-  h5{
-  font-family: 'Shrikhand', cursive, sans-serif;
-  }
-  
-  .ustensil{
-    display: flex;
-    align-items: center;
-        p{
-            margin-left: 20px;
-        }
-  }
-  
-  .hands{
-  display: flex;
-  align-items: center;
-;   p{
-      margin-left: 20px;
+    h5{
+      font-family: 'Shrikhand', cursive, sans-serif;
+      font-size: 1.5rem;
     }
-  }
+    .ustensil{
+      display: flex;
+      align-items: center;
+    }
+      .hands{
+      display: flex;
+      align-items: center;
+    }
+}
+  
   
   @media screen and (max-width:1000px){
     .menu{
@@ -273,3 +252,4 @@ footer{
       font-size: 15px;
     }
   }
+
