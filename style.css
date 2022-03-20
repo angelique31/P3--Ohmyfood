@@ -87,6 +87,7 @@ h1 {
 }
 .section2__flex--icon:hover {
   opacity: 0.7;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.445);
 }
 .section2 .fa-mobile-alt, .section2 .fa-list-ul, .section2 .fa-store {
   margin-right: 15px;
