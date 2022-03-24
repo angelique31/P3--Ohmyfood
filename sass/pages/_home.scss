@@ -2,303 +2,306 @@
 @import "../utils.scss/variables";
 @import "../base.scss/polices";
 
-body{
-    list-style: none;
-    text-decoration: 0;
-    margin: 0;
-    font-family: "Roboto", sans-serif;
-  }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style-type: none;
+  text-decoration: none;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
 
 header{
-    box-shadow: 5px 5px 5px 1px #bbb9b9;
-    padding: 0px 0;//espacement du titre du haut et du bas de l'ecran
-    position: relative;
-    //permet de faire passer le box shadow du bas au dessus de la bordure de city
-    //position relative = l'élément est placé par rapport à sa position naturelle
+  box-shadow: -2px -1px 5px 2px #bbb9b9;
+  padding: 20px 0;
+  position: relative;
+  background-color: white;
 }
 
-  
-    h1{
-      font-family: 'Shrikhand', cursive;
-      text-align: center;
-      margin-bottom: 0/*pour enlever la marge automatique entre en bas du h1*/
-    }
+h1{
+  font-family: 'Shrikhand', cursive;
+  text-align: center;
+}
 
-  .map{
-    @include flexCenter;
-     background: $grey;
-     width: 100%;
-     height: 60px;
-      p{
-        margin-left: 10px;/*pour décaler l'icone map du texte*/
-        font-weight: 800;
-        font-size: 1.2rem;
-      } 
-  }
+.map{
+  @include flexCenter;
+   background: $grey;
+   width: 100%;
+   height: 60px;
+    p{
+      padding: 8px 20px;
+      font-weight: 800;
+      font-size: 18px;
+    } 
+}
 
 .section1{
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    background: $lightgrey;
-    height: 200px;
-        p{
-           font-size: 15px; 
+  text-align: center;
+  background: $lightgrey;
+  height: 350px;
+    h2{
+      padding: 30px 20px 25px;
+      font-weight: 800;
+      font-size: 28px;
+      margin: 0 30px;
+    }
+    p{
+      font-size: 15px;
+      padding: 10px 20px 25px;
+      margin-bottom: 30px;
+    }
+    button{
+      padding: 25px;
+      border-radius: 30px;
+      border: transparent;
+      color: $white;
+      font-weight: 500;
+      font-size: 15px;
+      background: linear-gradient($secondary,$primary);
+      cursor: pointer;
+      transition: 1s;
+      @include boxShadow;
+        &:hover{
+          opacity: 0.8;
+          box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.445);
         }
-        button{
-          padding: 15px;
-          border-radius: 30px;
-          border: transparent;
-          color: $white;
-          font-weight: 500;
-          font-size: 15px;
-          background: linear-gradient($secondary,$primary);
-          cursor: pointer;
-          transition: 1s;
-          @include boxShadow;
-          &:hover{
-            opacity: 0.8;
-            box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.445);
-          }
-        }
+    }
 }
 
-//***************section 2 Fonctionnement**************
 .section2{
-    &__title{
-        text-align: center;
+  background-color: white;
+  height: 420px;
+  &__title{
+    font-size: 1.5rem;
+    margin: 0 30px 30px 30px;
+    padding-top: 20px;
+  }
+}
+
+li{
+  display: flex;
+  align-items: center;
+  padding: 30px;
+  margin: 30px;
+  background-color: $grey;
+  border-radius: 30px;
+  @include boxShadow;
+  position: relative;/*pour mettre le span en position absolute*/
+  cursor: pointer;
+  transition: 0.5s;
+  &:hover{
+    opacity:0.7;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.445);
+    background-color: #efd8fc;
+  }
+    span {
+      color: $white;
+      height: 25px;
+      width: 25px;
+      background-color: $primary;
+      border-radius: 50%;
+     @include flexCenter;
+      position: absolute;
+      left: -15px; //pour mettre le chiffre sur la bordure
     }
-    &__flex {
+    .fa-mobile-alt, .fa-list-ul, .fa-store {
+      margin-right: 15px;
+      &:hover{
+        color: #6d36af;
+      }
+    }
+
+}
+
+@media screen and (min-width: 950px){
+  .section2 ol{
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-      &--icon{
-        @include flexCenter;
-        padding: 0 50px 0 30px;
-        background-color: $grey;
-        border-radius: 15px;
-        @include boxShadow;
-        position: relative;/*pour mettre le span en position absolute*/
-        cursor: pointer;
-        transition: 0.5s;
-          &:hover{
-            opacity:0.7;
-            box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.445);
-          }
-      }
   }
-
-    .fa-mobile-alt, .fa-list-ul, .fa-store {
-    margin-right: 15px;
-    //pour faire une marge entre l'icone et le texte
-    }
-
-    span {
-    color: $white;
-    height: 25px;
-    width: 25px;
-    background-color: $primary;
-    border-radius: 50%;
-    @include flexCenter;
-    position: absolute;
-    left: -15px; //pour mettre le chiffre sur la bordure
-    }
-    
-    @media screen and (max-width: 1028px){
-        h2{
-          font-size: 1.5rem;
-        }
-        .section2__flex{
-            flex-direction: column;
-            margin-top: 20px;
-            &--icon{
-              margin-bottom: 20px;
-            }
-
-        }
-    }
-    @media screen and (max-width: 533px){
-        h2{
-          margin-right: 150px;
-        }
-  } 
+  li{
+    padding: 20px 50px;
+    font-size: 1.1rem;
+  }   
 }
-//************Section3 Restaurant**********************
 
 .section3{
-    background-color: $grey;
-    height: 700px;
-        &__title{
-          padding-top: 50px;
-          text-align: center;
-        }
-        &__flex{
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-                &--bordureMenu{
-                    border: 2px solid $white;
-                    border-radius: 20px;
-                    @include boxShadow;
-                    background-color: $white;
-                    width: 350px;
-                    height: 280px;
-                    margin-bottom: 20px;/*pour espacer les cartes*/
-                    margin-right: 20px;/*pour espacer les cartes*/
-                    position: relative;/*pour l'icone "new"*/
-                    .image1, .image2, .image3, .image4{
-                      @include imageSize;
+  background-color: $grey;
+  height: 1200px;
+      &__title{
+        padding-top: 50px;
+        font-size: 1.5rem;
+        margin: 0 30px 30px 30px;
+      }
+      &__flex{
+          display: flex;
+          justify-content: center;
+          flex-wrap: wrap;
+              &--bordureMenu{
+                  border: 2px solid $white;
+                  border-radius: 20px;
+                  box-shadow: 7px 8px 7px rgb(223, 220, 220);
+                  background-color: $white;
+                  width: 70%;
+                  height: 240px;
+                  margin-bottom: 20px;/*pour espacer les cartes*/
+                  margin-right: 20px;/*pour espacer les cartes*/
+                  position: relative;/*pour l'icone "new"*/
+                  .image1, .image2, .image3, .image4{
+                    @include imageSize;
+                  }
+                    &:hover{
+                      cursor: pointer;
                     }
-                      &:hover{
-                        cursor: pointer;
-                      }
-                    .new{
-                        position: absolute;
-                        right: 1rem;/*pour mettre l'icone "nouveau" à droite de l'image*/
-                        top: 0.1rem;/*pour mettre l'icone "nouveau" en hautde l'image*/
-                        padding: 5px;
-                        background-color: $tertiary;
-                      }
+                  .new{
+                      position: absolute;
+                      right: 1rem;/*pour mettre l'icone "nouveau" à droite de l'image*/
+                      top: 0.8rem;/*pour mettre l'icone "nouveau" en hautde l'image*/
+                      padding: 5px;
+                      background-color: $tertiary;
+                      color: #249f80;
+                      font-weight: 700;
+                    }
 
-                    .textImage{
-                      margin-left: 15px;
-                    } 
-                    h4{
-                      line-height: 2px;
-                    }
-                    .heart{
-                        position: relative;
-                        &__far{
-                            position: absolute;
-                            right: 1rem;/*pour mettre le coeur à droite*/
-                            bottom: 1.8rem;
-                            font-size: 30px;/*pour modifier la taille de l'icône qui est une font*/
-                            color: rgb(104, 101, 101);
-                          }  
-                          &__fas{
-                          color: transparent;
-                          background-clip: text;/*L'arrière-plan se limite au texte au premier-plan.*/
-                          -webkit-background-clip: text;
+                  .textImage{
+                    margin-left: 15px;
+                  } 
+                  h4{
+                    padding-top: 10px;
+                    font-weight: 800;
+                  }
+                  .heart{
+                      position: relative;
+                      &__far{
                           position: absolute;
-                          cursor: pointer;
                           right: 1rem;/*pour mettre le coeur à droite*/
-                          bottom: 1.8rem;
+                          bottom: 0rem;
                           font-size: 30px;/*pour modifier la taille de l'icône qui est une font*/
-                          // transition-duration: 0.25s;
-                            &:hover{
-                              background-image: linear-gradient($secondary,$primary);
-                            }
-                        }    
-                        
-                    }  
-                }
-            
-        }
+                          color: rgb(104, 101, 101);
+                        }  
+                        &__fas{
+                        color: transparent;
+                        background-clip: text;/*L'arrière-plan se limite au texte au premier-plan.*/
+                        -webkit-background-clip: text;
+                        position: absolute;
+                        cursor: pointer;
+                        right: 1rem;/*pour mettre le coeur à droite*/
+                        bottom: 0rem;
+                        font-size: 30px;/*pour modifier la taille de l'icône qui est une font*/
+                        transition:all 1500ms ease-in-out;
+                        opacity: 0;
+                          &:hover{
+                            background-image: linear-gradient($secondary,$primary);
+                            opacity: 1;
+                          }
+                      }    
+                      
+                  }  
+              }
+          
+      }
 }
 
-
-@media screen and (max-width: 1028px){
-  .section3__title{
-    font-size: 1.5rem;
-  }
-  // .section3__flex{
-  //   flex-direction: column;
-  //   align-items: center;
-  // }
-  .section3{
-    padding-bottom: 600px;//pour que le footer soit sous les photos
-  }
+@media screen and (min-width: 950px){
+    .section3{
+      height: 700px;
+    }
+    .section3__flex{
+      display: flex;
+      justify-content: center;
+      flex-wrap: nowrap;
+      margin: 0 20px;
+    }
 }
-@media screen and (max-width: 533px){
-  .section3__title{
-    margin-right: 240px;
-  }
-}    
-//******************Footer******************
 
 footer{
   background-color: rgb(68, 67, 67);
-  height: 250px;
+  height: 240px;
   color: $white;
-  padding-top: 10px;
+  padding-top: 40px;
   padding-left: 20px;
-}
+
     h5{
       font-family: 'Shrikhand', cursive, sans-serif;
-}
+      font-size: 1.2rem;
+      padding-bottom: 30px;
+    }
     .ustensil{
-       display: flex;
-       align-items: center;
-       p{
-         margin-left: 15px;/*pour espacer l'icone du mot*/
-       }
-      }
-    .hands{
         display: flex;
         align-items: center;
+        margin-bottom: 5px;
         p{
           margin-left: 15px;
+          cursor: pointer;
+        }
+       }
+     .hands{
+         display: flex;
+         align-items: center;
+         margin-bottom: 5px;
+         p{
+           margin-left: 15px;
+           cursor: pointer;
+          }
+       }
+ 
+     a{ //pour colorer le mot "contact" en blanc 
+       color: $white;
+       text-decoration: none;
+       cursor: pointer;
+      }
+     p{
+       margin-bottom: 5px;
+       cursor: pointer;
+      
+     }
+     
+    
+}
+
+@media screen and (min-width: 950px){
+  footer{
+    display: flex;
+  }
+  h5{
+    font-size: 1.2rem;
+    margin: 20px 0;
+  }
+  .flex{
+    @include flexCenter;
+    padding: 30px 70px;
+      .ustensil{
+        font-size: 1.1rem;
+        gap:  5px;
+        p{
+          margin-right: 50px;
+          font-size: 1.2rem;
+          margin-left: 5px;
         }
       }
-
-    a{ //pour colorer le mot "contact" en blanc 
-      color: $white;
-      text-decoration: none;
-    }
-    
-/*page loader*/
-.loader{
-  position: fixed;
-  @include flexCenter;
-  background-color: #f2f2f2;
-  height: 100vh;
-  inset: 0;
-  z-index: 1;/*pour positionner la page par dessus la page restaurant*/
-  opacity: 0.9;/*pour voir la page retaurant a travers la page du dessus*/
-  animation: disappear 1s;
-  animation-duration: 1s;
-  animation-fill-mode: forwards;/*une fois que l'animation est terminée, il ne revient pas a son point de départ*/
-  animation-delay: 2s;/* correspond au temps que met le spin avant de disparaitre*/
-  transform-origin: top;
-}
-
-@keyframes disappear{
-  0%{
-    transform: scale(1);
+      .hands{
+        font-size: 1.2rem;
+        gap: 5px;
+        p{
+          margin-right: 40px;
+          font-size: 1.1rem;
+          margin-left: 5px;
+        }
+      }
+      a{
+        font-size: 1.2rem;
+      }
+      p{
+        margin-left: 40px;
+        font-size: 1.2rem;
+        &:nth-child(3){
+          margin-right: 40px;
+        }
+      }
   }
-  100%{
-    transform: scale(0);
-  }
-}
-
-.loader::after{
-  content: "";
-  height: 100px;
-  width: 100px;
-  border-top: 5px solid #FF79DA;
-  border-bottom: 5px solid #9356DC;
-  border-right: 5px solid #99E2D0;
-  border-left: 5px solid #99E2D0;
-  border-radius: 50%;
-  animation: spin 2s infinite linear;
-  animation-duration: 1s;
-
-}
-
-@keyframes spin{
-  0%{
-    transform: rotate(360deg);
-  }
-  100%{
-    transform: rotate(0);
-  }
-}
-/*Fin de page loader*/
-
-
-
-
-
-
-
   
+  
+}
