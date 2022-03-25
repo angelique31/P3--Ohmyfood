@@ -1,18 +1,18 @@
 @import "../base.scss/polices";
 @import "../utils.scss/mixins";
 @import "../utils.scss/variables";
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    list-style-type: none;
-    text-decoration: none;
-  }
+@import "../base.scss/global";
+// * {
+//     margin: 0;
+//     padding: 0;
+//     box-sizing: border-box;
+//     list-style-type: none;
+//     text-decoration: none;
+//   }
   
-  body {
-    font-family: "Roboto", sans-serif;
-  }
+//   body {
+//     font-family: "Roboto", sans-serif;
+//   }
   
   header{
     .logo{
@@ -117,13 +117,14 @@ main{
     .check{
       background-color: $tertiary;
       border-radius: 0 1rem 1rem 0;
-      margin-right: -3rem; /*pour sortir le check de la div*/
+      margin-left: -3rem; 
       width: 4rem;
-      margin-right: 0;
-      transition: all 1s;
+      margin-left: 0;
+      // transition: all 0.5s;
       @include flexCenter;
       flex-shrink: 0;/*propriété qui interdit a l'élément de rétrécir*/
-      animation: slide-left 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+      animation: slide-left 1s ease;
+      
         i::before{
         content: "\f00c";
         font-family: "Font Awesome 5 free";
@@ -134,7 +135,7 @@ main{
         height: 2rem;
         @include flexCenter;
         color: $tertiary;
-        animation: quatorspin 0.5s both;
+        animation: quatorspin 1s ease-in;
     
       }
     }
@@ -159,31 +160,24 @@ main{
   align-items: flex-end;
 }
 
-// @keyframes slide-left {
-//   0% {
-//             transform: scaleX(0);
-//   }
-//   100% {
-//             transform: scaleX(-50px);
-//   }
-// }  
-
 @keyframes slide-left {
-  0% {
-    transform: translateX(0);
+  from {
+            margin-right: -75%;
+           
   }
-  100% {
-    transform: translateX(-100px);
+  to {
+            margin-right: 0%;
+            
   }
-}
+}  
+
+
 
 @keyframes quatorspin{
   0%{
-    transform: rotate(180deg);
+    transform: rotate(360deg);
   }
-  100%{
-    transform: rotate(0);
-  }
+
 }
 
 @media screen and (min-width:992px){

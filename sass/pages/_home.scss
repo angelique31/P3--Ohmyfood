@@ -302,6 +302,61 @@ footer{
         }
       }
   }
-  
-  
 }
+
+/*page loader*/
+.loader{
+  position: fixed;
+  @include flexCenter;
+  background-color: #f2f2f2;
+  height: 100vh;
+  inset: 0;
+  z-index: 1;/*pour positionner la page par dessus la page restaurant*/
+  opacity: 0.9;/*pour voir la page retaurant a travers la page du dessus*/
+  animation: disappear 1s;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;/*une fois que l'animation est terminée, il ne revient pas a son point de départ*/
+  animation-delay: 2s;/* correspond au temps que met le spin avant de disparaitre*/
+  transform-origin: top;
+}
+
+@keyframes disappear{
+  0%{
+    transform: scale(1);
+  }
+  100%{
+    transform: scale(0);
+  }
+}
+
+.loader::after{
+  content: "";
+  height: 100px;
+  width: 100px;
+  border-top: 5px solid #FF79DA;
+  border-bottom: 5px solid #9356DC;
+  border-right: 5px solid #99E2D0;
+  border-left: 5px solid #99E2D0;
+  border-radius: 50%;
+  animation: spin 2s infinite linear;
+  animation-duration: 1s;
+
+}
+
+@keyframes spin{
+  0%{
+    transform: rotate(360deg);
+  }
+  100%{
+    transform: rotate(0);
+  }
+}
+/*Fin de page loader*/
+
+
+
+
+
+
+
+  
