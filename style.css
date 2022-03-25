@@ -446,7 +446,7 @@ main .bordureMenu .heart__fas:hover {
   align-items: center;
   flex-shrink: 0;
   /*propriété qui interdit a l'élément de rétrécir*/
-  animation: slide-left 0.5s ease;
+  animation: slide-left 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 }
 .menu-item:hover .check i::before {
   content: "\f00c";
@@ -490,10 +490,10 @@ main .bordureMenu .heart__fas:hover {
 
 @keyframes slide-left {
   0% {
-    transform: scaleX(0);
+    transform: translateX(0);
   }
   100% {
-    transform: scaleX(-50px);
+    transform: translateX(0px);
   }
 }
 @keyframes quatorspin {

@@ -123,7 +123,7 @@ main{
       transition: all 1s;
       @include flexCenter;
       flex-shrink: 0;/*propriété qui interdit a l'élément de rétrécir*/
-      animation: slide-left 0.5s ease;
+      animation: slide-left 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
         i::before{
         content: "\f00c";
         font-family: "Font Awesome 5 free";
@@ -159,14 +159,23 @@ main{
   align-items: flex-end;
 }
 
+// @keyframes slide-left {
+//   0% {
+//             transform: scaleX(0);
+//   }
+//   100% {
+//             transform: scaleX(-50px);
+//   }
+// }  
+
 @keyframes slide-left {
   0% {
-            transform: scaleX(0);
+    transform: translateX(0);
   }
   100% {
-            transform: scaleX(-50px);
+    transform: translateX(-100px);
   }
-}  
+}
 
 @keyframes quatorspin{
   0%{
