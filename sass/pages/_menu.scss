@@ -2,49 +2,52 @@
 @import "../utils.scss/mixins";
 @import "../utils.scss/variables";
 @import "../base.scss/global";
-// * {
-//     margin: 0;
-//     padding: 0;
-//     box-sizing: border-box;
-//     list-style-type: none;
-//     text-decoration: none;
-//   }
-  
-//   body {
-//     font-family: "Roboto", sans-serif;
-//   }
+@import "../composant.scss/button";
+@import "../composant.scss/animation";
+
   
   header{
     .logo{
       height: 40px;
       text-align: center;
-      padding-top: 10px;
-      padding-bottom: 30px;//pour faire une marge entre le logo et l'image
+      padding: 10px 30px 0 0;
       position: relative;
   
       .arrow{
         position: absolute;
         top: 15px;
-        margin-left: 30px;//pour décaler la flèche du bord gauche de l'ecran
+        margin-left: 30px;
         font-size: 25px;
-        color:black
+        color: $black;
       }
         h1{
-        font-family: 'Shrikhand', cursive;
         text-align: center;
-        color: black;
-        margin-top: 0;
+        color: $black;
         font-size: 1.5rem;
         }
-      
     }
-    
   } 
-  .image1{
+
+  .image{
     object-fit: cover;
     width: 100%;
     height: 400px;
+    margin-top: 20px;
   }
+
+  @media screen and (min-width:992px) {
+    header .logo h1{
+      font-size: 3rem;
+    }  
+    .image{
+      margin-top: 40px;
+    }
+    header .logo .arrow{
+      top:35px;
+    }
+  }
+
+/************Menu***********/
 main{
   background-color: #f5f3f3;               
   .bordureMenu{
@@ -55,18 +58,17 @@ main{
     position: relative;
     margin-top: -4rem;//pour remonter la bordure par dessus l'image
       h2{
-        font-family: 'Shrikhand', cursive, sans-serif;
         font-size: 1.5rem;
-        margin-left: 30px;//pour décaler le titre du bord
+        margin-left: 30px;
         padding: 30px 0;
       }
       .heart{
         position: relative;
         &__far{
             position: absolute;
-            right: 3rem;/*pour mettre le coeur à droite*/
-            bottom: 35px;
-            font-size: 25px;/*pour modifier la taille de l'icône qui est une font*/
+            right: 48px;
+            bottom: 30px;
+            font-size: 25px;
             color: rgb(104, 101, 101);
           }  
         &__fas{
@@ -75,8 +77,8 @@ main{
           -webkit-background-clip: text;
           position: absolute;
           cursor: pointer;
-          right: 3rem;/*pour mettre le coeur à droite*/
-          bottom: 35px;
+          right: 48px;
+          bottom: 30px;
           font-size: 25px;
           transition:all 1500ms ease-in-out;
           opacity: 0;
@@ -111,7 +113,7 @@ main{
   border-radius: 1rem;
   @include boxShadow;
   background-color:$white;
-  margin: 20px;/* marge pour séparer les menus*/
+  margin: 20px;
   cursor: pointer;
   &:hover  
     .check{
@@ -160,25 +162,6 @@ main{
   align-items: flex-end;
 }
 
-@keyframes slide-left {
-  from {
-            margin-right: -75%;
-           
-  }
-  to {
-            margin-right: 0%;
-            
-  }
-}  
-
-
-
-@keyframes quatorspin{
-  0%{
-    transform: rotate(360deg);
-  }
-
-}
 
 @media screen and (min-width:992px){
   .menu{
@@ -232,7 +215,6 @@ main{
 .delay-1{
   animation-delay: .1s; /*définit la durée d'attente avant de démarrer une animation*/ 
 }
-
 .delay-2{
   animation-delay: .2s;
 }

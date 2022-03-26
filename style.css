@@ -17,50 +17,20 @@ body {
   font-family: "Roboto", sans-serif;
 }
 
-header {
-  box-shadow: -2px -1px 5px 2px #bbb9b9;
-  padding: 20px 0;
-  position: relative;
-  background-color: white;
-}
-
 h1 {
   font-family: "Shrikhand", cursive;
-  text-align: center;
 }
 
-.map {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: #f5f3f3;
-  width: 100%;
-  height: 60px;
-}
-.map p {
-  padding: 8px 20px;
-  font-weight: 800;
-  font-size: 18px;
+h2 {
+  font-family: "Roboto", cursive, sans-serif;
 }
 
-.section1 {
-  text-align: center;
-  background: #fdfbfb;
-  height: 350px;
+h5 {
+  font-family: "Shrikhand", cursive, sans-serif;
 }
-.section1 h2 {
-  padding: 30px 20px 25px;
-  font-weight: 800;
-  font-size: 28px;
-  margin: 0 30px;
-}
-.section1 p {
-  font-size: 15px;
-  padding: 10px 20px 25px;
-  margin-bottom: 30px;
-}
-.section1 button {
-  padding: 15px 45px;
+
+button {
+  padding: 15px 25px;
   border-radius: 30px;
   border: transparent;
   color: white;
@@ -71,16 +41,108 @@ h1 {
   transition: 1s;
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.212);
 }
-.section1 button:hover {
+button:hover {
   opacity: 0.8;
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.445);
 }
 
-.section2 {
+/*******page loader*******/
+@keyframes disappear {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
+@keyframes spin {
+  0% {
+    transform: rotate(360deg);
+  }
+  100% {
+    transform: rotate(0);
+  }
+}
+/*******animation check************/
+@keyframes slide-left {
+  from {
+    margin-right: -75%;
+  }
+  to {
+    margin-right: 0%;
+  }
+}
+@keyframes quatorspin {
+  0% {
+    transform: rotate(360deg);
+  }
+}
+/*animation pour faire apparaitre progressivement les menus*/
+@keyframes appear {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.menu-item {
+  animation: appear 0.6s;
+}
+
+.delay-1 {
+  animation-delay: 0.1s;
+  /*définit la durée d'attente avant de démarrer une animation*/
+}
+
+.delay-2 {
+  animation-delay: 0.2s;
+}
+
+.delay-3 {
+  animation-delay: 0.3s;
+}
+
+h1 {
+  text-align: center;
+}
+
+.map {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #e6e0e0;
+  width: 100%;
+  height: 60px;
+}
+.map p {
+  padding: 8px 20px;
+  font-weight: 800;
+  font-size: 1.2rem;
+}
+
+.discover {
+  text-align: center;
+  background: #f5f3f3;
+  height: 350px;
+}
+.discover h2 {
+  padding: 30px 20px 22px;
+  font-weight: 900;
+  font-size: 1.7rem;
+  margin: 0 30px;
+}
+.discover p {
+  font-size: 1.2rem;
+  padding: 10px 20px 25px;
+  margin-bottom: 30px;
+}
+
+.choice {
   background-color: white;
   height: 420px;
 }
-.section2__title {
+.choice__title {
   font-size: 1.5rem;
   margin: 0 30px 30px 30px;
   padding-top: 20px;
@@ -124,7 +186,7 @@ li .fa-mobile-alt:hover, li .fa-list-ul:hover, li .fa-store:hover {
 }
 
 @media screen and (min-width: 950px) {
-  .section2 ol {
+  .choice ol {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
@@ -132,102 +194,93 @@ li .fa-mobile-alt:hover, li .fa-list-ul:hover, li .fa-store:hover {
 
   li {
     padding: 20px 50px;
-    font-size: 1.1rem;
+    font-size: 1.2rem;
   }
 }
-.section3 {
+.picture {
   background-color: #f5f3f3;
   height: 1200px;
 }
-.section3__title {
+.picture__title {
   padding-top: 50px;
   font-size: 1.5rem;
-  margin: 0 30px 30px 30px;
+  margin: 0 30px 30px 22px;
 }
-.section3__flex {
+.picture__flex {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
 }
-.section3__flex--bordureMenu {
+.picture__flex--bordureMenu {
   border: 2px solid white;
   border-radius: 20px;
   box-shadow: 7px 8px 7px #dfdcdc;
   background-color: white;
-  width: 70%;
+  width: 90%;
   height: 240px;
-  margin-bottom: 20px;
-  /*pour espacer les cartes*/
-  margin-right: 20px;
-  /*pour espacer les cartes*/
+  margin: 0 20px 20px 10px;
   position: relative;
   /*pour l'icone "new"*/
 }
-.section3__flex--bordureMenu .image1, .section3__flex--bordureMenu .image2, .section3__flex--bordureMenu .image3, .section3__flex--bordureMenu .image4 {
+.picture__flex--bordureMenu .image1, .picture__flex--bordureMenu .image2, .picture__flex--bordureMenu .image3, .picture__flex--bordureMenu .image4 {
   object-fit: cover;
   width: 100%;
   height: 170px;
   border-radius: 20px 20px 0 0;
 }
-.section3__flex--bordureMenu:hover {
+.picture__flex--bordureMenu:hover {
   cursor: pointer;
 }
-.section3__flex--bordureMenu .new {
+.picture__flex--bordureMenu .new {
   position: absolute;
-  right: 1rem;
-  /*pour mettre l'icone "nouveau" à droite de l'image*/
-  top: 0.8rem;
-  /*pour mettre l'icone "nouveau" en hautde l'image*/
-  padding: 5px;
+  right: 16px;
+  top: 13px;
+  padding: 8px;
   background-color: #99E2D0;
   color: #249f80;
   font-weight: 700;
 }
-.section3__flex--bordureMenu .textImage {
+.picture__flex--bordureMenu .textImage {
   margin-left: 15px;
 }
-.section3__flex--bordureMenu h4 {
+.picture__flex--bordureMenu h4 {
   padding-top: 10px;
   font-weight: 800;
 }
-.section3__flex--bordureMenu .heart {
+.picture__flex--bordureMenu .heart {
   position: relative;
 }
-.section3__flex--bordureMenu .heart__far {
+.picture__flex--bordureMenu .heart__far {
   position: absolute;
-  right: 1rem;
-  /*pour mettre le coeur à droite*/
-  bottom: 0rem;
+  right: 16px;
+  bottom: 7px;
   font-size: 30px;
-  /*pour modifier la taille de l'icône qui est une font*/
   color: #686565;
 }
-.section3__flex--bordureMenu .heart__fas {
+.picture__flex--bordureMenu .heart__fas {
   color: transparent;
   background-clip: text;
   /*L'arrière-plan se limite au texte au premier-plan.*/
   -webkit-background-clip: text;
   position: absolute;
   cursor: pointer;
-  right: 1rem;
-  /*pour mettre le coeur à droite*/
-  bottom: 0rem;
+  right: 16px;
+  bottom: 7px;
   font-size: 30px;
-  /*pour modifier la taille de l'icône qui est une font*/
   transition: all 1500ms ease-in-out;
   opacity: 0;
 }
-.section3__flex--bordureMenu .heart__fas:hover {
+.picture__flex--bordureMenu .heart__fas:hover {
   background-image: linear-gradient(#FF79DA, #9356DC);
   opacity: 1;
 }
 
 @media screen and (min-width: 950px) {
-  .section3 {
+  .picture {
     height: 700px;
   }
 
-  .section3__flex {
+  .picture__flex {
     display: flex;
     justify-content: center;
     flex-wrap: nowrap;
@@ -235,16 +288,14 @@ li .fa-mobile-alt:hover, li .fa-list-ul:hover, li .fa-store:hover {
   }
 }
 footer {
-  background-color: #444343;
+  background-color: black;
   height: 240px;
   color: white;
-  padding-top: 40px;
-  padding-left: 20px;
+  padding: 40px 0 0 20px;
 }
 footer h5 {
-  font-family: "Shrikhand", cursive, sans-serif;
   font-size: 1.2rem;
-  padding-bottom: 30px;
+  padding: 30px 0;
 }
 footer .ustensil {
   display: flex;
@@ -291,7 +342,7 @@ footer p {
     padding: 30px 70px;
   }
   .flex .ustensil {
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     gap: 5px;
   }
   .flex .ustensil p {
@@ -305,7 +356,7 @@ footer p {
   }
   .flex .hands p {
     margin-right: 40px;
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     margin-left: 5px;
   }
   .flex a {
@@ -331,7 +382,6 @@ footer p {
   z-index: 1;
   /*pour positionner la page par dessus la page restaurant*/
   opacity: 0.9;
-  /*pour voir la page retaurant a travers la page du dessus*/
   animation: disappear 1s;
   animation-duration: 1s;
   animation-fill-mode: forwards;
@@ -339,15 +389,6 @@ footer p {
   animation-delay: 2s;
   /* correspond au temps que met le spin avant de disparaitre*/
   transform-origin: top;
-}
-
-@keyframes disappear {
-  0% {
-    transform: scale(1);
-  }
-  100% {
-    transform: scale(0);
-  }
 }
 .loader::after {
   content: "";
@@ -362,15 +403,6 @@ footer p {
   animation-duration: 1s;
 }
 
-@keyframes spin {
-  0% {
-    transform: rotate(360deg);
-  }
-  100% {
-    transform: rotate(0);
-  }
-}
-/*Fin de page loader*/
 * {
   margin: 0;
   padding: 0;
@@ -383,11 +415,96 @@ body {
   font-family: "Roboto", sans-serif;
 }
 
+h1 {
+  font-family: "Shrikhand", cursive;
+}
+
+h2 {
+  font-family: "Roboto", cursive, sans-serif;
+}
+
+h5 {
+  font-family: "Shrikhand", cursive, sans-serif;
+}
+
+button {
+  padding: 15px 25px;
+  border-radius: 30px;
+  border: transparent;
+  color: white;
+  font-weight: 500;
+  font-size: 15px;
+  background: linear-gradient(#FF79DA, #9356DC);
+  cursor: pointer;
+  transition: 1s;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.212);
+}
+button:hover {
+  opacity: 0.8;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.445);
+}
+
+/*******page loader*******/
+@keyframes disappear {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
+@keyframes spin {
+  0% {
+    transform: rotate(360deg);
+  }
+  100% {
+    transform: rotate(0);
+  }
+}
+/*******animation check************/
+@keyframes slide-left {
+  from {
+    margin-right: -75%;
+  }
+  to {
+    margin-right: 0%;
+  }
+}
+@keyframes quatorspin {
+  0% {
+    transform: rotate(360deg);
+  }
+}
+/*animation pour faire apparaitre progressivement les menus*/
+@keyframes appear {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.menu-item {
+  animation: appear 0.6s;
+}
+
+.delay-1 {
+  animation-delay: 0.1s;
+  /*définit la durée d'attente avant de démarrer une animation*/
+}
+
+.delay-2 {
+  animation-delay: 0.2s;
+}
+
+.delay-3 {
+  animation-delay: 0.3s;
+}
+
 header .logo {
   height: 40px;
   text-align: center;
-  padding-top: 10px;
-  padding-bottom: 30px;
+  padding: 10px 30px 0 0;
   position: relative;
 }
 header .logo .arrow {
@@ -398,19 +515,32 @@ header .logo .arrow {
   color: black;
 }
 header .logo h1 {
-  font-family: "Shrikhand", cursive;
   text-align: center;
   color: black;
-  margin-top: 0;
   font-size: 1.5rem;
 }
 
-.image1 {
+.image {
   object-fit: cover;
   width: 100%;
   height: 400px;
+  margin-top: 20px;
 }
 
+@media screen and (min-width: 992px) {
+  header .logo h1 {
+    font-size: 3rem;
+  }
+
+  .image {
+    margin-top: 40px;
+  }
+
+  header .logo .arrow {
+    top: 35px;
+  }
+}
+/************Menu***********/
 main {
   background-color: #f5f3f3;
 }
@@ -422,7 +552,6 @@ main .bordureMenu {
   margin-top: -4rem;
 }
 main .bordureMenu h2 {
-  font-family: "Shrikhand", cursive, sans-serif;
   font-size: 1.5rem;
   margin-left: 30px;
   padding: 30px 0;
@@ -432,11 +561,9 @@ main .bordureMenu .heart {
 }
 main .bordureMenu .heart__far {
   position: absolute;
-  right: 3rem;
-  /*pour mettre le coeur à droite*/
-  bottom: 35px;
+  right: 48px;
+  bottom: 30px;
   font-size: 25px;
-  /*pour modifier la taille de l'icône qui est une font*/
   color: #686565;
 }
 main .bordureMenu .heart__fas {
@@ -445,9 +572,8 @@ main .bordureMenu .heart__fas {
   -webkit-background-clip: text;
   position: absolute;
   cursor: pointer;
-  right: 3rem;
-  /*pour mettre le coeur à droite*/
-  bottom: 35px;
+  right: 48px;
+  bottom: 30px;
   font-size: 25px;
   transition: all 1500ms ease-in-out;
   opacity: 0;
@@ -482,7 +608,6 @@ main .bordureMenu .heart__fas:hover {
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.212);
   background-color: white;
   margin: 20px;
-  /* marge pour séparer les menus*/
   cursor: pointer;
 }
 .menu-item:hover .check {
@@ -538,19 +663,6 @@ main .bordureMenu .heart__fas:hover {
   align-items: flex-end;
 }
 
-@keyframes slide-left {
-  from {
-    margin-right: -75%;
-  }
-  to {
-    margin-right: 0%;
-  }
-}
-@keyframes quatorspin {
-  0% {
-    transform: rotate(360deg);
-  }
-}
 @media screen and (min-width: 992px) {
   .menu {
     display: grid;
@@ -676,7 +788,7 @@ footer .hands {
   }
   .flex p:nth-child(3) {
     margin-right: 40px;
-  }
+  } 
 }
 
-/*# sourceMappingURL=style.css.map */
+/* # sourceMappingURL=style.css.map */

@@ -1,0 +1,65 @@
+/*******page loader*******/
+@keyframes disappear{
+    0%{
+      transform: scale(1);
+    }
+    100%{
+      transform: scale(0);
+    }
+  }
+
+  @keyframes spin{
+    0%{
+      transform: rotate(360deg);
+    }
+    100%{
+      transform: rotate(0);
+    }
+  }
+
+/*******animation check************/
+  @keyframes slide-left {
+    from {
+              margin-right: -75%;
+             
+    }
+    to {
+              margin-right: 0%;
+              
+    }
+  }  
+  
+  @keyframes quatorspin{
+    0%{
+      transform: rotate(360deg);
+    }
+  
+  }
+  
+  /*animation pour faire apparaitre progressivement les menus*/
+@keyframes appear{
+  0%{
+    transform: scale(0);
+  
+  }
+  100%{
+    transform: scale(1);
+    
+  }
+}
+
+.menu-item{
+  animation: appear .6s;
+}
+
+.delay-1{
+  animation-delay: .1s; /*définit la durée d'attente avant de démarrer une animation*/ 
+}
+.delay-2{
+  animation-delay: .2s;
+}
+
+.delay-3{
+  animation-delay: .3s;
+}
+
