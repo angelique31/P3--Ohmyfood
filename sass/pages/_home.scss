@@ -1,9 +1,8 @@
 @import "../utils.scss/mixins";
-@import "../utils.scss/variables";
-@import "../base.scss/polices";
-@import "../base.scss/global";
-@import "../composant.scss/button";
-@import "../composant.scss/animation";
+@import "../base/variables";
+@import "../base/global";
+@import "../composant/buttons";
+@import "../composant/animations";
 
 h1{
   text-align: center;

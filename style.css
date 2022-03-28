@@ -3,8 +3,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;200;&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -788,7 +786,7 @@ footer .hands {
   }
   .flex p:nth-child(3) {
     margin-right: 40px;
-  } 
+  }
 }
 
-/* # sourceMappingURL=style.css.map */
+/*# sourceMappingURL=style.css.map */
