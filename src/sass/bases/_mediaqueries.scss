@@ -1,0 +1,105 @@
+/*********header du menu*********/
+@media screen and (min-width:992px) {
+    header .logo h1{
+      font-size: 3rem;
+    }  
+    // .picture{
+    //   margin-top: 40px;
+    // }
+    header .logo .arrow{
+      top:35px;
+    }
+  }
+
+  @media screen and (min-width:992px){
+    .menu{
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);/*3 colonnes qui font toutes la même taille*/
+    }
+  }
+
+  @media screen and (min-width: 992px){
+    footer{
+      display: flex;
+    }
+    h5{
+      font-size: 1.2rem;
+      margin: 20px 0;
+    }
+    .flex{
+      @include flexCenter;
+      padding: 30px 70px;
+        .ustensil{
+          font-size: 1.1rem;
+          gap:  5px;
+          p{
+            margin-right: 50px;
+            font-size: 1.2rem;
+            margin-left: 5px;
+          }
+        }
+        .hands{
+          font-size: 1.2rem;
+          gap: 5px;
+          p{
+            margin-right: 40px;
+            font-size: 1.1rem;
+            margin-left: 5px;
+          }
+        }
+        a{
+          font-size: 1.2rem;
+        }
+        p{
+          margin-left: 40px;
+          font-size: 1.2rem;
+          &:nth-child(3){
+            margin-right: 40px;
+          }
+        }
+    }
+  }
+  
+  /********home********/
+  @media screen and (min-width: 992px){
+    footer{
+      display: flex;
+    }
+    h5{
+      font-size: 1.2rem;
+      margin: 20px 0;
+    }
+    .flex{
+      @include flexCenter;
+      padding: 30px 70px;
+        .ustensil{
+          font-size: 1.1rem;
+          gap:  5px;
+          p{
+            margin-right: 50px;
+            font-size: 1.2rem;
+            margin-left: 5px;
+          }
+        }
+        .hands{
+          font-size: 1.2rem;
+          gap: 5px;
+          p{
+            margin-right: 40px;
+            font-size: 1.1rem;
+            margin-left: 5px;
+          }
+        }
+        a{
+          font-size: 1.2rem;
+        }
+        p{
+          margin-left: 40px;
+          font-size: 1.2rem;
+          &:nth-child(3){
+            margin-right: 40px;
+          }
+        }
+    }
+  }
+   

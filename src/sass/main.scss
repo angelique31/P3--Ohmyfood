@@ -1,13 +1,9 @@
+@import"./bases/global";
+@import"./bases/variables";
+@import"./composants/animations";
+@import"./composants/buttons";
+@import"./utils/mixins";
+@import"./bases/mediaqueries";
 
-
-@import"./base/global";
-@import"./base/variables";
-@import"./composant/animations";
-@import"./composant/buttons";
 @import"./pages/home";
 @import"./pages/menu";
-@import"./utils/mixins";
-
-
-
-

@@ -8,7 +8,7 @@ button{
     background: linear-gradient($secondary,$primary);
     cursor: pointer;
     transition: 1s;
-    @include boxShadow;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.212);
       &:hover{
         opacity: 0.8;
         box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.445);
