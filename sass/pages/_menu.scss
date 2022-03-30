@@ -94,7 +94,7 @@ main{
 
 .menu-item{
   display: flex;
-  overflow: hidden;/*pour "cacher" le check qui est en dehors de la div*/
+  overflow: hidden;//pour "cacher" le check qui est en dehors de la div
   border-radius: 16px;
   @include boxShadow;
   background-color:$white;
@@ -108,7 +108,7 @@ main{
       width: 4rem;
       margin-left: 0;
       @include flexCenter;
-      flex-shrink: 0;/*propriété qui interdit a l'élément de rétrécir*/
+      flex-shrink: 0;//propriété qui interdit a l'élément de rétrécir
       animation: slide-left 1s ease;
       
         i::before{
@@ -127,20 +127,20 @@ main{
     }
 }   
 .menu-item-text{
-  padding: 16px;/*pour que l'item check prenne bien la hauteur du parent menuItemDescription*/
+  padding: 16px;//pour que l'item check prenne bien la hauteur du parent menuItemDescription
   overflow: hidden;
   h4, p{
     overflow: hidden;
-    white-space: nowrap;/*pour demander de ne pas aller à la ligne*/
-    text-overflow: ellipsis;/*pour faire apparaitre les ... au responsive mobile*/
+    white-space: nowrap;//pour demander de ne pas aller à la ligne
+    text-overflow: ellipsis;//pour faire apparaitre les ... au responsive mobile
   }
 }
 
 .price{
-  margin-left: auto;/*pour mettre le prix a droite de la bordure*/
+  margin-left: auto;//pour mettre le prix a droite de la bordure
   font-weight: $bolder;
   padding: 16px;
-  display: flex;/*pour descendre le prix en bas de la div. Il faut mettre un span car sinin le flex ne marche pas*/
+  display: flex;//pour descendre le prix en bas de la div. Il faut mettre un span car sinin le flex ne marche pas
   align-items: flex-end;
 }
 

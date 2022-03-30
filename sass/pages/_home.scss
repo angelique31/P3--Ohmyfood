@@ -10,7 +10,7 @@ h1{
    height: 60px;
     p{
       padding: 8px 20px;
-      font-weight: 800;
+      font-weight: $bolder;
       @include fontSizeSmall;
     } 
 }
@@ -19,9 +19,9 @@ h1{
   text-align: center;
   background: $grey;
   height: 350px;
-    h2{
+    p:nth-child(1){
       padding: 30px 20px 22px;
-      font-weight: 900;
+      font-weight: $bolder;
       font-size: 1.7rem;
       margin: 0 30px;
     }
@@ -37,7 +37,8 @@ h1{
   height: 420px;
   &__title{
    @include fontSizeTitle;
-    margin: 0 30px 30px 30px;
+   font-family: $bolder;
+    margin: 0 30px 30px;
     padding-top: 20px;
   }
 }
@@ -50,7 +51,7 @@ li{
   background-color: $grey;
   border-radius: 30px;
   @include boxShadow;
-  position: relative;/*pour mettre le span en position absolute*/
+  position: relative;//pour mettre le span en position absolute
   cursor: pointer;
   transition: 0.5s;
   &:hover{
@@ -70,9 +71,13 @@ li{
     }
     .fa-mobile-alt, .fa-list-ul, .fa-store {
       margin-right: 15px;
+      font-size: 20px;
       &:hover{
         color: $primaryDarken
       }
+    }
+    p{
+      @include fontSizeSmall;
     }
 
 }
@@ -109,13 +114,12 @@ li{
                   width: 90%;
                   height: 240px;
                   margin: 0 20px 20px 10px;
-                  position: relative;/*pour l'icone "new"*/
+                  position: relative;//pour l'icone "new"
+                  cursor: pointer;
                   .image1, .image2, .image3, .image4{
                     @include imageSize;
                   }
-                    &:hover{
-                      cursor: pointer;
-                    }
+                   
                   .new{
                       position: absolute;
                       right: 16px;
@@ -131,7 +135,7 @@ li{
                   } 
                   h4{
                     padding-top: 10px;
-                    font-weight: 800;
+                    font-weight: $bolder;
                   }
                   .heart{
                       position: relative;
@@ -139,18 +143,18 @@ li{
                           position: absolute;
                           right: 16px;
                           bottom: 7px;
-                          font-size: 30px;
-                          color: rgb(104, 101, 101);
+                          font-size: $sizeHeart;
+                          color: $blackLightest;
                         }  
                         &__fas{
                         color: transparent;
-                        background-clip: text;/*L'arrière-plan se limite au texte au premier-plan.*/
+                        background-clip: text;//L'arrière-plan se limite au texte au premier-plan.
                         -webkit-background-clip: text;
                         position: absolute;
                         cursor: pointer;
                         right: 16px;
                         bottom: 7px;
-                        font-size: 30px;
+                        font-size: $sizeHeart;
                         transition:all 1500ms ease-in-out;
                         opacity: 0;
                           &:hover{
@@ -235,18 +239,16 @@ footer{
         @include fontSizeSmall;
         gap:  5px;
         p{
-          margin-right: 50px;
+          margin: 0 50px 5px;
           @include fontSizeSmall;
-          margin-left: 5px;
         }
       }
       .hands{
         @include fontSizeSmall;
         gap: 5px;
         p{
-          margin-right: 40px;
+          margin: 0 40px 5px;
           @include fontSizeSmall;
-          margin-left: 5px;
         }
       }
       a{
@@ -266,15 +268,15 @@ footer{
 .loader{
   position: fixed;
   @include flexCenter;
-  background-color: #f2f2f2;
+  background-color: $white;
   height: 100vh;
   inset: 0;
-  z-index: 1;/*pour positionner la page par dessus la page restaurant*/
+  z-index: 1;//pour positionner la page par dessus la page restaurant
   opacity: 0.9;
   animation: disappear 1s;
   animation-duration: 1s;
-  animation-fill-mode: forwards;/*une fois que l'animation est terminée, il ne revient pas a son point de départ*/
-  animation-delay: 2s;/* correspond au temps que met le spin avant de disparaitre*/
+  animation-fill-mode: forwards;//une fois que l'animation est terminée, il ne revient pas a son point de départ
+  animation-delay: 2s;//correspond au temps que met le spin avant de disparaitre
   transform-origin: top;
   &::after{
     content: "";
