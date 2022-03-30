@@ -1,8 +1,17 @@
+@import "./sass/bases/global";
+@import "./sass/bases/polices";
+
+@import "./sass/utils/mixins";
+@import "./sass/utils/variables";
+
+@import "./sass/composants/animations";
+@import "./sass/composants/buttons";
+
 @import "./sass/pages/home";
 @import "./sass/pages/menu";
 
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;200;&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
+
+
 
 
 
