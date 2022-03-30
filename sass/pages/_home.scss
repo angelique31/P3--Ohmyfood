@@ -97,6 +97,9 @@ li{
 .picture{
   background-color: $grey;
   height: 1200px;
+  @media screen and (min-width: 950px){
+      height: 700px;
+    }
       &__title{
         padding-top: 50px;
         @include fontSizeTitle;
@@ -106,6 +109,12 @@ li{
           display: flex;
           justify-content: center;
           flex-wrap: wrap;
+          @media screen and (min-width: 950px){
+              display: flex;
+              justify-content: center;
+              flex-wrap: nowrap;
+              margin: 0 20px;
+            }
               &--bordureMenu{
                   border: 2px solid $white;
                   border-radius: 20px;
@@ -169,28 +178,23 @@ li{
       }
 }
 
-@media screen and (min-width: 950px){
-    .picture{
-      height: 700px;
-    }
-    .picture__flex{
-      display: flex;
-      justify-content: center;
-      flex-wrap: nowrap;
-      margin: 0 20px;
-    }
-}
-
+/*******Footer******/
 footer{
   background-color: $black;
   height: 240px;
   color: $white;
   padding: 40px 0 0 20px;
-
+  @media screen and (min-width: 950px){
+      display: flex;
+    }
     h5{
      @include fontSizeSmall;
       padding: 30px 0;
-    }
+      @media screen and (min-width: 950px){
+          @include fontSizeSmall;
+          margin: 20px 0;
+        }
+      }
     .ustensil{
         display: flex;
         align-items: center;
@@ -225,13 +229,6 @@ footer{
 }
 
 @media screen and (min-width: 950px){
-  footer{
-    display: flex;
-  }
-  h5{
-    @include fontSizeSmall;
-    margin: 20px 0;
-  }
   .flex{
     @include flexCenter;
     padding: 30px 70px;

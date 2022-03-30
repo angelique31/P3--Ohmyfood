@@ -12,30 +12,29 @@
         margin-left: 30px;
         font-size: 20px;
         color: $black;
+        @media screen and (min-width:992px){
+          top:35px;
+          font-size: 30px;
+        }
       }
         h1{
         text-align: center;
         color: $black;
         @include fontSizeTitle;
+        @media screen and (min-width:992px) {
+          font-size: 3rem;
         }
     }
   } 
-
-  @media screen and (min-width:992px) {
-    header .logo h1{
-      font-size: 3rem;
-    }  
-    
-    header .logo .arrow{
-      top:35px;
-      font-size: 30px;
-    }
 }
 
 /************Menu***********/
 main{
   background-color: $grey;
   margin-top: 20px;
+  @media screen and (min-width:992px){
+      margin-top: 60px;
+  }
   .picture{
     @include imageSizeBig;
   }               
@@ -79,6 +78,10 @@ main{
   display: grid;
   grid-template-columns: 1fr;
   width: 100%;
+  @media screen and (min-width:992px){
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+  }
   .menu-category{
     overflow: hidden;
       h3{
@@ -145,16 +148,6 @@ main{
 }
 
 
-@media screen and (min-width:992px){
-  main{
-    margin-top: 60px;
-  }
-  .menu{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-
 /*******Button*****/
 .order button {
   margin: 20px 0 40px 0;
@@ -170,8 +163,15 @@ footer{
   height: 300px;
   color: $white;
   padding-left: 20px;
+  @media screen and (min-width: 992px){
+      display: flex;
+    }
     h5{
       @include fontSizeTitle;
+      @media screen and (min-width: 992px){
+        @include fontSizeSmall;
+        margin: 20px 0;
+      }
     }
     .ustensil{
       display: flex;
@@ -184,14 +184,7 @@ footer{
 }
 
 @media screen and (min-width: 992px){
-  footer{
-    display: flex;
-  }
-  h5{
-    @include fontSizeSmall;
-    margin: 20px 0;
-  }
-  .flex{
+    .flex{
     @include flexCenter;
     padding: 30px 70px;
       .ustensil{

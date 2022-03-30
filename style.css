@@ -192,6 +192,11 @@ li p {
   background-color: #f5f3f3;
   height: 1200px;
 }
+@media screen and (min-width: 950px) {
+  .picture {
+    height: 700px;
+  }
+}
 .picture__title {
   padding-top: 50px;
   font-size: 1.5rem;
@@ -201,6 +206,14 @@ li p {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+}
+@media screen and (min-width: 950px) {
+  .picture__flex {
+    display: flex;
+    justify-content: center;
+    flex-wrap: nowrap;
+    margin: 0 20px;
+  }
 }
 .picture__flex--bordureMenu {
   border: 2px solid white;
@@ -262,27 +275,27 @@ li p {
   opacity: 1;
 }
 
-@media screen and (min-width: 950px) {
-  .picture {
-    height: 700px;
-  }
-
-  .picture__flex {
-    display: flex;
-    justify-content: center;
-    flex-wrap: nowrap;
-    margin: 0 20px;
-  }
-}
+/*******Footer******/
 footer {
   background-color: black;
   height: 240px;
   color: white;
   padding: 40px 0 0 20px;
 }
+@media screen and (min-width: 950px) {
+  footer {
+    display: flex;
+  }
+}
 footer h5 {
   font-size: 1.2rem;
   padding: 30px 0;
+}
+@media screen and (min-width: 950px) {
+  footer h5 {
+    font-size: 1.2rem;
+    margin: 20px 0;
+  }
 }
 footer .ustensil {
   display: flex;
@@ -313,15 +326,6 @@ footer p {
 }
 
 @media screen and (min-width: 950px) {
-  footer {
-    display: flex;
-  }
-
-  h5 {
-    font-size: 1.2rem;
-    margin: 20px 0;
-  }
-
   .flex {
     display: flex;
     justify-content: center;
@@ -398,26 +402,32 @@ header .logo .arrow {
   font-size: 20px;
   color: black;
 }
-header .logo h1 {
-  text-align: center;
-  color: black;
-  font-size: 1.5rem;
-}
-
 @media screen and (min-width: 992px) {
-  header .logo h1 {
-    font-size: 3rem;
-  }
-
   header .logo .arrow {
     top: 35px;
     font-size: 30px;
   }
 }
+header .logo h1 {
+  text-align: center;
+  color: black;
+  font-size: 1.5rem;
+}
+@media screen and (min-width: 992px) {
+  header .logo h1 {
+    font-size: 3rem;
+  }
+}
+
 /************Menu***********/
 main {
   background-color: #f5f3f3;
   margin-top: 20px;
+}
+@media screen and (min-width: 992px) {
+  main {
+    margin-top: 60px;
+  }
 }
 main .picture {
   object-fit: cover;
@@ -467,6 +477,12 @@ main .bordureMenu .heart__fas:hover {
   display: grid;
   grid-template-columns: 1fr;
   width: 100%;
+}
+@media screen and (min-width: 992px) {
+  .menu {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 .menu .menu-category {
   overflow: hidden;
@@ -533,16 +549,6 @@ main .bordureMenu .heart__fas:hover {
   align-items: flex-end;
 }
 
-@media screen and (min-width: 992px) {
-  main {
-    margin-top: 60px;
-  }
-
-  .menu {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
 /*******Button*****/
 .order button {
   margin: 20px 0 40px 0;
@@ -561,8 +567,19 @@ footer {
   color: white;
   padding-left: 20px;
 }
+@media screen and (min-width: 992px) {
+  footer {
+    display: flex;
+  }
+}
 footer h5 {
   font-size: 1.5rem;
+}
+@media screen and (min-width: 992px) {
+  footer h5 {
+    font-size: 1.2rem;
+    margin: 20px 0;
+  }
 }
 footer .ustensil {
   display: flex;
@@ -574,15 +591,6 @@ footer .hands {
 }
 
 @media screen and (min-width: 992px) {
-  footer {
-    display: flex;
-  }
-
-  h5 {
-    font-size: 1.2rem;
-    margin: 20px 0;
-  }
-
   .flex {
     display: flex;
     justify-content: center;
