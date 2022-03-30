@@ -16,7 +16,7 @@
         h1{
         text-align: center;
         color: $black;
-        font-size: 1.5rem;
+        @include fontSizeTitle;
         }
     }
   } 
@@ -34,12 +34,10 @@
 
 /************Menu***********/
 main{
-  background-color: #f5f3f3;
+  background-color: $grey;
   margin-top: 20px;
   .picture{
-    object-fit: cover;
-    width: 100%;
-    height: 400px;
+    @include imageSizeBig;
   }               
   .bordureMenu{
     background-color: $grey;
@@ -48,30 +46,26 @@ main{
     position: relative;
     margin-top: -4rem;//pour remonter la bordure par dessus l'image
       h2{
-        font-size: 1.5rem;
+        @include fontSizeTitle;
         margin-left: 30px;
         padding: 30px 0;
       }
       .heart{
         position: relative;
         &__far{
-            position: absolute;
-            right: 48px;
-            bottom: 37px;
-            font-size: 25px;
-            color: rgb(104, 101, 101);
+            @include heartPosition;
+            font-size: $sizeHeart;
+            color: $blackLight
           }  
         &__fas{
           color: transparent;
           background-clip: text;
           -webkit-background-clip: text;
-          position: absolute;
-          cursor: pointer;
-          right: 48px;
-          bottom: 37px;
-          font-size: 25px;
+          @include heartPosition;
+          font-size: $sizeHeart;
           transition:all 1500ms ease-in-out;
           opacity: 0;
+          cursor: pointer;
               &:hover{
               background-image: linear-gradient($secondary,$primary);
               opacity: 1;
@@ -85,22 +79,23 @@ main{
   display: grid;
   grid-template-columns: 1fr;
   width: 100%;
+  .menu-category{
+    overflow: hidden;
+      h3{
+        text-transform: uppercase;
+        border-bottom: solid 3px  $tertiary;
+        width: 50px;
+        margin-left: 28px;
+        color: $blackLightest;
+      }    
+  }
 }
 
-.menu-category{
-  overflow: hidden;
-    h3{
-      text-transform: uppercase;
-      border-bottom: solid 3px  $tertiary;
-      width: 50px;
-      margin-left: 28px;
-      color:#847f7f
-    }    
-}
+
 .menu-item{
   display: flex;
   overflow: hidden;/*pour "cacher" le check qui est en dehors de la div*/
-  border-radius: 1rem;
+  border-radius: 16px;
   @include boxShadow;
   background-color:$white;
   margin: 20px;
@@ -108,7 +103,7 @@ main{
   &:hover  
     .check{
       background-color: $tertiary;
-      border-radius: 0 1rem 1rem 0;
+      border-radius: 0 16px 16px 0;
       margin-left: -3rem; 
       width: 4rem;
       margin-left: 0;
@@ -119,7 +114,7 @@ main{
         i::before{
         content: "\f00c";
         font-family: "Font Awesome 5 free";
-        font-weight: 900;
+        font-weight: $bolder;
         background: $white;
         border-radius: 50%;
         width: 2rem;
@@ -132,11 +127,9 @@ main{
     }
 }   
 .menu-item-text{
-  padding: 1rem;/*pour que l'item check prenne bien la hauteur du parent menuItemDescription*/
+  padding: 16px;/*pour que l'item check prenne bien la hauteur du parent menuItemDescription*/
   overflow: hidden;
   h4, p{
-    padding: 0;
-    margin: 0;
     overflow: hidden;
     white-space: nowrap;/*pour demander de ne pas aller à la ligne*/
     text-overflow: ellipsis;/*pour faire apparaitre les ... au responsive mobile*/
@@ -145,8 +138,8 @@ main{
 
 .price{
   margin-left: auto;/*pour mettre le prix a droite de la bordure*/
-  font-weight: 900;
-  padding: 1rem;
+  font-weight: $bolder;
+  padding: 16px;
   display: flex;/*pour descendre le prix en bas de la div. Il faut mettre un span car sinin le flex ne marche pas*/
   align-items: flex-end;
 }
@@ -158,46 +151,27 @@ main{
   }
   .menu{
     display: grid;
-    grid-template-columns: repeat(3, 1fr);/*3 colonnes qui font toutes la même taille*/
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 
+/*******Button*****/
 .order button {
-  padding: 15px 45px;
-  border-radius: 30px;
-  border: transparent;
-  color: $white;
-  font-weight: 500;
-  font-size: 15px;
-  background: linear-gradient($secondary,$primary);
-  cursor: pointer;
-  transition: background-color 1s;
-  @include boxShadow;
   margin: 20px 0 40px 0;
-  transition: 1s;
-  &:hover{
-    opacity: 0.8;
-    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.445);
-  }
 }
 
 .order{
-  display: flex;/*pour centrer le bouton*/
-  justify-content: center;
-  align-items: center;
+  @include flexCenter;
 }
 
 /**********Footer*************/
 footer{
-  // margin-top: 20px;
-  background-color: rgb(68, 67, 67);
+  background-color: $blackLight;
   height: 300px;
   color: $white;
-  padding-top: 10px;
   padding-left: 20px;
     h5{
-      font-family: 'Shrikhand', cursive, sans-serif;
-      font-size: 1.5rem;
+      @include fontSizeTitle;
     }
     .ustensil{
       display: flex;
@@ -214,36 +188,36 @@ footer{
     display: flex;
   }
   h5{
-    font-size: 1.2rem;
+    @include fontSizeSmall;
     margin: 20px 0;
   }
   .flex{
     @include flexCenter;
     padding: 30px 70px;
       .ustensil{
-        font-size: 1.1rem;
+        @include fontSizeSmall;
         gap:  5px;
         p{
           margin-right: 50px;
-          font-size: 1.2rem;
+          @include fontSizeSmall;
           margin-left: 5px;
         }
       }
       .hands{
-        font-size: 1.2rem;
+        @include fontSizeSmall;
         gap: 5px;
         p{
           margin-right: 40px;
-          font-size: 1.1rem;
+          @include fontSizeSmall;
           margin-left: 5px;
         }
       }
       a{
-        font-size: 1.2rem;
+        @include fontSizeSmall;
       }
       p{
         margin-left: 40px;
-        font-size: 1.2rem;
+        @include fontSizeSmall;
         &:nth-child(3){
           margin-right: 40px;
         }

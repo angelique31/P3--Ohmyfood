@@ -17,6 +17,7 @@ h1, h2, h5 {
   font-family: "Shrikhand", cursive, sans-serif;
 }
 
+/*******colors******/
 /*******page loader*******/
 @keyframes disappear {
   0% {
@@ -450,19 +451,19 @@ main .bordureMenu .heart__far {
   right: 48px;
   bottom: 37px;
   font-size: 25px;
-  color: #686565;
+  color: #444343;
 }
 main .bordureMenu .heart__fas {
   color: transparent;
   background-clip: text;
   -webkit-background-clip: text;
   position: absolute;
-  cursor: pointer;
   right: 48px;
   bottom: 37px;
   font-size: 25px;
   transition: all 1500ms ease-in-out;
   opacity: 0;
+  cursor: pointer;
 }
 main .bordureMenu .heart__fas:hover {
   background-image: linear-gradient(#FF79DA, #9356DC);
@@ -474,11 +475,10 @@ main .bordureMenu .heart__fas:hover {
   grid-template-columns: 1fr;
   width: 100%;
 }
-
-.menu-category {
+.menu .menu-category {
   overflow: hidden;
 }
-.menu-category h3 {
+.menu .menu-category h3 {
   text-transform: uppercase;
   border-bottom: solid 3px #99E2D0;
   width: 50px;
@@ -490,7 +490,7 @@ main .bordureMenu .heart__fas:hover {
   display: flex;
   overflow: hidden;
   /*pour "cacher" le check qui est en dehors de la div*/
-  border-radius: 1rem;
+  border-radius: 16px;
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.212);
   background-color: white;
   margin: 20px;
@@ -498,7 +498,7 @@ main .bordureMenu .heart__fas:hover {
 }
 .menu-item:hover .check {
   background-color: #99E2D0;
-  border-radius: 0 1rem 1rem 0;
+  border-radius: 0 16px 16px 0;
   margin-left: -3rem;
   width: 4rem;
   margin-left: 0;
@@ -525,13 +525,11 @@ main .bordureMenu .heart__fas:hover {
 }
 
 .menu-item-text {
-  padding: 1rem;
+  padding: 16px;
   /*pour que l'item check prenne bien la hauteur du parent menuItemDescription*/
   overflow: hidden;
 }
 .menu-item-text h4, .menu-item-text p {
-  padding: 0;
-  margin: 0;
   overflow: hidden;
   white-space: nowrap;
   /*pour demander de ne pas aller à la ligne*/
@@ -543,7 +541,7 @@ main .bordureMenu .heart__fas:hover {
   margin-left: auto;
   /*pour mettre le prix a droite de la bordure*/
   font-weight: 900;
-  padding: 1rem;
+  padding: 16px;
   display: flex;
   /*pour descendre le prix en bas de la div. Il faut mettre un span car sinin le flex ne marche pas*/
   align-items: flex-end;
@@ -557,31 +555,15 @@ main .bordureMenu .heart__fas:hover {
   .menu {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    /*3 colonnes qui font toutes la même taille*/
   }
 }
+/*******Button*****/
 .order button {
-  padding: 15px 45px;
-  border-radius: 30px;
-  border: transparent;
-  color: white;
-  font-weight: 500;
-  font-size: 15px;
-  background: linear-gradient(#FF79DA, #9356DC);
-  cursor: pointer;
-  transition: background-color 1s;
-  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.212);
   margin: 20px 0 40px 0;
-  transition: 1s;
-}
-.order button:hover {
-  opacity: 0.8;
-  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.445);
 }
 
 .order {
   display: flex;
-  /*pour centrer le bouton*/
   justify-content: center;
   align-items: center;
 }
@@ -591,11 +573,9 @@ footer {
   background-color: #444343;
   height: 300px;
   color: white;
-  padding-top: 10px;
   padding-left: 20px;
 }
 footer h5 {
-  font-family: "Shrikhand", cursive, sans-serif;
   font-size: 1.5rem;
 }
 footer .ustensil {
@@ -624,7 +604,7 @@ footer .hands {
     padding: 30px 70px;
   }
   .flex .ustensil {
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     gap: 5px;
   }
   .flex .ustensil p {
@@ -638,7 +618,7 @@ footer .hands {
   }
   .flex .hands p {
     margin-right: 40px;
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     margin-left: 5px;
   }
   .flex a {

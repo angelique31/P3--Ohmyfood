@@ -9,6 +9,11 @@
 	height: 170px;
 	border-radius: 20px 20px 0 0;
 }
+@mixin imageSizeBig{
+	object-fit: cover;
+    width: 100%;
+    height: 400px;
+}
 @mixin boxShadow {
 box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.212);
 }
@@ -21,9 +26,14 @@ box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.212);
 	box-shadow: 7px 8px 7px rgb(223, 220, 220);
 }
 
-@mixin fontSizeTitleH3{
+@mixin fontSizeTitle{
 	font-size: 1.5rem;
 }
-@mixin fontsizeSmall{
+@mixin fontSizeSmall{
 	font-size: 1.2rem;
+}
+@mixin heartPosition{
+	position: absolute;
+    right: 48px;
+    bottom: 37px;
 }
