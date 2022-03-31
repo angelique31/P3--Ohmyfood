@@ -1,8 +1,35 @@
-
-h1{
-  text-align: center;
+/*********page loader*******/
+.loader{
+  position: fixed;
+  @include mixins.flexCenter;
+  background-color: global.$white;
+  height: 100vh;
+  inset: 0;
+  z-index: 1;
+  opacity: 0.9;
+  animation: disappear 2s forwards 2s;
+  transform-origin: top;
+  &::after{
+    content: "";
+    height: 100px;
+    width: 100px;
+    border-top: 5px solid global.$secondary;
+    border-bottom: 5px solid global.$primary;
+    border-right: 5px solid global.$tertiary;
+    border-left: 5px solid global.$tertiary;
+    border-radius: 50%;
+    animation: spin 1s infinite linear;
+    
+  }
 }
 
+/*******Title******/
+h1{
+  text-align: center;
+  font-family: global.$font1;
+}
+
+/********Map********/
 .map{
   @include mixins.flexCenter;
    background: global.$darkgrey;
@@ -12,17 +39,19 @@ h1{
       padding: 8px 20px;
       font-weight: global.$bolder;
       font-size: global.$fontSizeSmall;
+      cursor: pointer;
     } 
 }
 
+/*********Discover********/
 .discover{
   text-align: center;
   background: global.$grey;
-  height: 350px;
-    p:nth-child(1){
+  height: 320px;
+    h2{
       padding: 30px 20px 22px;
       font-weight: global.$bolder;
-      // font-family: $font2;
+      font-family: global.$font2;
       font-size: 1.7rem;
       margin: 0 30px;
     }
@@ -33,14 +62,22 @@ h1{
     }
 }
 
+/***********Choose list**********/
 .choice{
   background-color: global.$white;
   height: 420px;
+  @media screen and (min-width: 950px){
+    height: 350px;  
+  }
   &__title{
     font-size: global.$fontSizeTitle;
     font-family: global.$bolder;
-    margin: 0 30px 30px;
+    margin: 0 15px 30px;
     padding-top: 20px;
+    @media screen and (min-width: 950px){
+      text-align: center;
+      font-size: 2rem;
+    }
   }
 }
 
@@ -52,23 +89,27 @@ li{
   background-color: global.$grey;
   border-radius: 30px;
   @include mixins.boxShadow;
-  position: relative;//pour mettre le span en position absolute
+  position: relative;
   cursor: pointer;
   transition: 0.5s;
-  &:hover{
-    opacity:0.7;
-    @include mixins.boxShadowDarken;
-    background-color: global.$secondaryLight
+  @media screen and (min-width: 950px){
+    padding: 20px 50px;
+    font-size: global.$fontSizeSmall;
   }
+    &:hover{
+      opacity:0.7;
+      @include mixins.boxShadowDarken;
+      background-color: global.$secondaryLight
+    }
     span {
       color: global.$white;
       height: 25px;
       width: 25px;
       background-color: global.$primary;
       border-radius: 50%;
-     @include mixins.flexCenter;
+      @include mixins.flexCenter;
       position: absolute;
-      left: -15px; //pour mettre le chiffre sur la bordure
+      left: -15px;
     }
     .fa-mobile-alt, .fa-list-ul, .fa-store {
       margin-right: 15px;
@@ -89,12 +130,9 @@ li{
     justify-content: space-evenly;
     align-items: center;
   }
-  li{
-    padding: 20px 50px;
-    font-size: global.$fontSizeSmall;
-  }   
 }
 
+/***********Menu card*********/
 .picture{
   background-color: global.$grey;
   height: 1200px;
@@ -104,7 +142,13 @@ li{
       &__title{
         padding-top: 50px;
         font-size: global.$fontSizeTitle;
-        margin: 0 30px 30px 22px;
+        margin: 0 30px 30px 15px;
+        @media screen and (min-width: 950px){
+          text-align: center;
+          font-size: 2rem;
+          padding-top: 0;
+          margin-bottom: 70px;
+        }
       }
       &__flex{
           display: flex;
@@ -124,72 +168,72 @@ li{
                   width: 90%;
                   height: 240px;
                   margin: 0 20px 20px 10px;
-                  position: relative;//pour l'icone "new"
+                  position: relative;
                   cursor: pointer;
                   .image1, .image2, .image3, .image4{
                     @include mixins.imageSize;
                   }
-                   
-                  .new{
-                      position: absolute;
-                      right: 16px;
-                      top: 13px;
-                      padding: 8px;
-                      background-color: global.$tertiary;
-                      color: global.$tertiaryDarken;
-                      font-weight: 700;
-                    }
-
-                  .textImage{
-                    margin-left: 15px;
-                  } 
-                  h4{
-                    padding-top: 10px;
-                    font-weight: global.$bolder;
-                  }
-                  .heart{
-                      position: relative;
-                      &__far{
-                          position: absolute;
-                          right: 16px;
-                          bottom: 7px;
-                          font-size: global.$sizeHeart;
-                          color: global.$blackLightest;
-                        }  
-                        &__fas{
-                        color: transparent;
-                        background-clip: text;//L'arrière-plan se limite au texte au premier-plan.
-                        -webkit-background-clip: text;
-                        position: absolute;
-                        cursor: pointer;
-                        right: 16px;
-                        bottom: 7px;
-                        font-size: global.$sizeHeart;
-                        transition:all 1500ms ease-in-out;
-                        opacity: 0;
-                          &:hover{
-                            background-image: linear-gradient(global.$secondary,global.$primary);
-                            opacity: 1;
-                          }
-                      }    
-                      
-                  }  
-              }
-          
+              }  
       }
 }
+/*******card new on the menu card*******/
+.picture .new{
+  position: absolute;
+  right: 16px;
+  top: 13px;
+  padding: 8px;
+  background-color: global.$tertiary;
+  color: global.$tertiaryDarken;
+  font-weight: 700;
+  .textImage{
+    margin-left: 15px;
+    h4{
+      padding-top: 10px;
+      font-weight: global.$bolder;
+    }
+  } 
+}
+/*********Heart on the menu card*********/
+.picture .heart{
+  position: relative;
+    &__far{
+    position: absolute;
+    right: 16px;
+    bottom: 7px;
+    font-size: global.$sizeHeart;
+    color: global.$blackLightest;
+  }  
+    &__fas{
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    position: absolute;
+    cursor: pointer;
+    right: 16px;
+    bottom: 7px;
+    font-size: global.$sizeHeart;
+    transition: all 1500ms ease-in-out;
+    opacity: 0;
+      &:hover{
+        background-image: linear-gradient(global.$secondary,global.$primary);
+        opacity: 1;
+      }
+    }    
+}  
+                 
 
 /*******Footer******/
 footer{
   background-color: global.$black;
   height: 240px;
   color: global.$white;
-  padding: 40px 0 0 20px;
+  padding: 20px 0 0 20px;
   @media screen and (min-width: 950px){
       display: flex;
     }
     h5{
       font-size: global.$fontSizeSmall;
+      font-family: global.$font1;
       padding: 30px 0;
       @media screen and (min-width: 950px){
           font-size: global.$fontSizeSmall;
@@ -259,33 +303,6 @@ footer{
   }
 }
 
-/*page loader*/
-.loader{
-  position: fixed;
-  @include mixins.flexCenter;
-  background-color: global.$white;
-  height: 100vh;
-  inset: 0;
-  z-index: 1;//pour positionner la page par dessus la page restaurant
-  opacity: 0.9;
-  animation: disappear 2s forwards 2s;
-  // animation-duration: 2s;
-  // animation-fill-mode: forwards;
-  // animation-delay: 2s;
-  transform-origin: top;
-  &::after{
-    content: "";
-    height: 100px;
-    width: 100px;
-    border-top: 5px solid global.$secondary;
-    border-bottom: 5px solid global.$primary;
-    border-right: 5px solid global.$tertiary;
-    border-left: 5px solid global.$tertiary;
-    border-radius: 50%;
-    animation: spin 1s infinite linear;
-    
-  }
-}
 
 
 
