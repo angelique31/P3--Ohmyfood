@@ -5,15 +5,50 @@
     list-style-type: none;
     text-decoration: none;
   }
+
+  
+  /***********************VARIABLES******************/
+
+  /********font family*****/
+  $font1 :'Shrikhand', cursive, sans-serif;
+  $font2 : "Roboto", sans-serif;
+
+  /********Dimensions******/
+  $sizeHeart: 25px;
+  
+  /********font weight*******/
+  $bolder: 900;
+
+  /*********Font-size********/
+  $fontSizeTitle: 1.5rem;
+  $fontSizeSmall: 1.2rem;
+  
+  /*******colors******/
+  $white:white;
+  $black:black;
+  $blackLight: rgb(68, 67, 67);
+  $blackLightest : #847f7f;
+  
+  $grey: rgb(245, 243, 243);
+  $lightgrey:rgb(253, 251, 251);
+  $darkgrey:rgb(230, 224, 224);
+  
+  $primary:#9356DC;
+  $primaryDarken:#6d36af;
+  
+  $secondary:#FF79DA;
+  $secondaryLight:  #efd8fc;
+  
+  $tertiary:#99E2D0;
+  $tertiaryDarken: #249f80;
+  
   
   body {
-    font-family: "Roboto", sans-serif;
+    font-family: $font2;
   }
   
   h1, h2, h5{
-    font-family: 'Shrikhand', cursive, sans-serif;
+    font-family: $font1;
   }
-
- 
 
   
