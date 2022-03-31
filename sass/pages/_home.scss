@@ -4,41 +4,41 @@ h1{
 }
 
 .map{
-  @include flexCenter;
-   background: $darkgrey;
+  @include mixins.flexCenter;
+   background: global.$darkgrey;
    width: 100%;
    height: 60px;
     p{
       padding: 8px 20px;
-      font-weight: $bolder;
-      font-size: $fontSizeSmall;
+      font-weight: global.$bolder;
+      font-size: global.$fontSizeSmall;
     } 
 }
 
 .discover{
   text-align: center;
-  background: $grey;
+  background: global.$grey;
   height: 350px;
     p:nth-child(1){
       padding: 30px 20px 22px;
-      font-weight: $bolder;
+      font-weight: global.$bolder;
       // font-family: $font2;
       font-size: 1.7rem;
       margin: 0 30px;
     }
     p{
-      font-size: $fontSizeSmall;
+      font-size: global.$fontSizeSmall;
       padding: 10px 20px 25px;
       margin-bottom: 30px;
     }
 }
 
 .choice{
-  background-color: $white;
+  background-color: global.$white;
   height: 420px;
   &__title{
-    font-size: $fontSizeTitle;
-    font-family: $bolder;
+    font-size: global.$fontSizeTitle;
+    font-family: global.$bolder;
     margin: 0 30px 30px;
     padding-top: 20px;
   }
@@ -49,24 +49,24 @@ li{
   align-items: center;
   padding: 30px;
   margin: 30px;
-  background-color: $grey;
+  background-color: global.$grey;
   border-radius: 30px;
-  @include boxShadow;
+  @include mixins.boxShadow;
   position: relative;//pour mettre le span en position absolute
   cursor: pointer;
   transition: 0.5s;
   &:hover{
     opacity:0.7;
-    @include boxShadowDarken;
-    background-color:$secondaryLight
+    @include mixins.boxShadowDarken;
+    background-color: global.$secondaryLight
   }
     span {
-      color: $white;
+      color: global.$white;
       height: 25px;
       width: 25px;
-      background-color: $primary;
+      background-color: global.$primary;
       border-radius: 50%;
-     @include flexCenter;
+     @include mixins.flexCenter;
       position: absolute;
       left: -15px; //pour mettre le chiffre sur la bordure
     }
@@ -74,11 +74,11 @@ li{
       margin-right: 15px;
       font-size: 20px;
       &:hover{
-        color: $primaryDarken
+        color: global.$primaryDarken
       }
     }
     p{
-      font-size: $fontSizeSmall;
+      font-size: global.$fontSizeSmall;
     }
 
 }
@@ -91,19 +91,19 @@ li{
   }
   li{
     padding: 20px 50px;
-    font-size: $fontSizeSmall;
+    font-size: global.$fontSizeSmall;
   }   
 }
 
 .picture{
-  background-color: $grey;
+  background-color: global.$grey;
   height: 1200px;
   @media screen and (min-width: 950px){
       height: 700px;
     }
       &__title{
         padding-top: 50px;
-        font-size: $fontSizeTitle;
+        font-size: global.$fontSizeTitle;
         margin: 0 30px 30px 22px;
       }
       &__flex{
@@ -117,17 +117,17 @@ li{
               margin: 0 20px;
             }
               &--bordureMenu{
-                  border: 2px solid $white;
+                  border: 2px solid global.$white;
                   border-radius: 20px;
-                  @include boxShadowLight;
-                  background-color: $white;
+                  @include mixins.boxShadowLight;
+                  background-color: global.$white;
                   width: 90%;
                   height: 240px;
                   margin: 0 20px 20px 10px;
                   position: relative;//pour l'icone "new"
                   cursor: pointer;
                   .image1, .image2, .image3, .image4{
-                    @include imageSize;
+                    @include mixins.imageSize;
                   }
                    
                   .new{
@@ -135,8 +135,8 @@ li{
                       right: 16px;
                       top: 13px;
                       padding: 8px;
-                      background-color: $tertiary;
-                      color:$tertiaryDarken;
+                      background-color: global.$tertiary;
+                      color: global.$tertiaryDarken;
                       font-weight: 700;
                     }
 
@@ -145,7 +145,7 @@ li{
                   } 
                   h4{
                     padding-top: 10px;
-                    font-weight: $bolder;
+                    font-weight: global.$bolder;
                   }
                   .heart{
                       position: relative;
@@ -153,8 +153,8 @@ li{
                           position: absolute;
                           right: 16px;
                           bottom: 7px;
-                          font-size: $sizeHeart;
-                          color: $blackLightest;
+                          font-size: global.$sizeHeart;
+                          color: global.$blackLightest;
                         }  
                         &__fas{
                         color: transparent;
@@ -164,11 +164,11 @@ li{
                         cursor: pointer;
                         right: 16px;
                         bottom: 7px;
-                        font-size: $sizeHeart;
+                        font-size: global.$sizeHeart;
                         transition:all 1500ms ease-in-out;
                         opacity: 0;
                           &:hover{
-                            background-image: linear-gradient($secondary,$primary);
+                            background-image: linear-gradient(global.$secondary,global.$primary);
                             opacity: 1;
                           }
                       }    
@@ -181,18 +181,18 @@ li{
 
 /*******Footer******/
 footer{
-  background-color: $black;
+  background-color: global.$black;
   height: 240px;
-  color: $white;
+  color: global.$white;
   padding: 40px 0 0 20px;
   @media screen and (min-width: 950px){
       display: flex;
     }
     h5{
-      font-size: $fontSizeSmall;
+      font-size: global.$fontSizeSmall;
       padding: 30px 0;
       @media screen and (min-width: 950px){
-          font-size: $fontSizeSmall;
+          font-size: global.$fontSizeSmall;
           margin: 20px 0;
         }
       }
@@ -216,7 +216,7 @@ footer{
        }
  
      a{ 
-       color: $white;
+       color: global.$white;
        text-decoration: none;
        cursor: pointer;
       }
@@ -228,30 +228,30 @@ footer{
 
 @media screen and (min-width: 950px){
   .flex{
-    @include flexCenter;
+    @include mixins.flexCenter;
     padding: 30px 70px;
       .ustensil{
-        font-size: $fontSizeSmall;
+        font-size: global.$fontSizeSmall;
         gap:  5px;
         p{
           margin: 0 50px 5px;
-          font-size: $fontSizeSmall;
+          font-size: global.$fontSizeSmall;
         }
       }
       .hands{
-        font-size: $fontSizeSmall;
+        font-size: global.$fontSizeSmall;
         gap: 5px;
         p{
           margin: 0 40px 5px;
-          font-size: $fontSizeSmall;
+          font-size: global.$fontSizeSmall;
         }
       }
       a{
-        font-size: $fontSizeSmall;
+        font-size: global.$fontSizeSmall;
       }
       p{
         margin-left: 40px;
-        font-size: $fontSizeSmall;
+        font-size: global.$fontSizeSmall;
         &:nth-child(3){
           margin-right: 40px;
         }
@@ -262,8 +262,8 @@ footer{
 /*page loader*/
 .loader{
   position: fixed;
-  @include flexCenter;
-  background-color: $white;
+  @include mixins.flexCenter;
+  background-color: global.$white;
   height: 100vh;
   inset: 0;
   z-index: 1;//pour positionner la page par dessus la page restaurant
@@ -277,10 +277,10 @@ footer{
     content: "";
     height: 100px;
     width: 100px;
-    border-top: 5px solid $secondary;
-    border-bottom: 5px solid $primary;
-    border-right: 5px solid $tertiary;
-    border-left: 5px solid $tertiary;
+    border-top: 5px solid global.$secondary;
+    border-bottom: 5px solid global.$primary;
+    border-right: 5px solid global.$tertiary;
+    border-left: 5px solid global.$tertiary;
     border-radius: 50%;
     animation: spin 1s infinite linear;
     

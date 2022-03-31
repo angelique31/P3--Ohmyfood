@@ -2,15 +2,15 @@ button{
     padding: 15px 25px;
     border-radius: 30px;
     border: transparent;
-    color: $white;
+    color: global.$white;
     font-weight: 500;
     font-size: 15px;
-    background: linear-gradient($secondary,$primary);
+    background: linear-gradient(global.$secondary,global.$primary);
     cursor: pointer;
     transition: 1s;
-    @include boxShadow;
+    @include mixins.boxShadow;
       &:hover{
         opacity: 0.8;
-        @include boxShadowDarken;
+        @include mixins.boxShadowDarken;
       }
   }

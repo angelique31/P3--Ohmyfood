@@ -1,8 +1,8 @@
-@import "./sass/bases/global";
-@import "./sass/bases/polices";
+@use "./sass/bases/global";
+@use "./sass/bases/polices";
 
 
-@import "./sass/utils/mixins";
+@use "./sass/utils/mixins";
 
 
 @import "./sass/composants/animations";
