@@ -41,9 +41,9 @@ main{
   .bordureMenu{
     background-color: global.$grey;
     border-radius: 25px 25px 0 0;
-    z-index: 1;//pour remonter la bordure par dessus l'image
+    z-index: 1;
     position: relative;
-    margin-top: -4rem;//pour remonter la bordure par dessus l'image
+    margin-top: -4rem;
       h2{
         font-family: global.$font1;
         font-size: global.$fontSizeTitle;
@@ -112,7 +112,7 @@ main{
       width: 4rem;
       margin-left: 0;
       @include mixins.flexCenter;
-      flex-shrink: 0;//propriété qui interdit a l'élément de rétrécir
+      flex-shrink: 0;
       animation: slide-left 1s ease;
       
         i::before{
@@ -126,7 +126,6 @@ main{
         @include mixins.flexCenter;
         color: global.$tertiary;
         animation: quatorspin 1s ease-in;
-    
       }
     }
 }

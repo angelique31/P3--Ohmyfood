@@ -71,7 +71,7 @@ h1{
   }
   &__title{
     font-size: global.$fontSizeTitle;
-    font-family: global.$bolder;
+    font-weight: global.$bolder;
     margin: 0 15px 30px;
     padding-top: 20px;
     @media screen and (min-width: 950px){
@@ -161,7 +161,7 @@ li{
               margin: 0 20px;
             }
               &--bordureMenu{
-                  border: 2px solid global.$white;
+                  border: 2px solid;
                   border-radius: 20px;
                   @include mixins.boxShadowLight;
                   background-color: global.$white;
