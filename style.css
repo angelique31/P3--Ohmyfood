@@ -272,7 +272,7 @@ li p {
   }
 }
 .picture__flex--bordureMenu {
-  border: 2px solid;
+  border: 2px solid white;
   border-radius: 20px;
   box-shadow: 7px 8px 7px #dfdcdc;
   background-color: white;

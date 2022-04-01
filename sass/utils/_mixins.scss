@@ -1,8 +1,15 @@
-@mixin flexCenter {
+// @mixin flexCenter {
+// 	display: flex;
+// 	justify-content: center;
+// 	align-items: center;
+// }
+@mixin flexPosition($space){
 	display: flex;
-	justify-content: center;
+	justify-content: $space;
 	align-items: center;
 }
+
+
 @mixin imageSize{
     object-fit: cover;
 	width: 100%;

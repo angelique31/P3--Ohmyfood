@@ -111,7 +111,7 @@ main{
       margin-left: -3rem; 
       width: 4rem;
       margin-left: 0;
-      @include mixins.flexCenter;
+      @include mixins.flexPosition(center);
       flex-shrink: 0;
       animation: slide-left 1s ease;
       
@@ -123,7 +123,7 @@ main{
         border-radius: 50%;
         width: 2rem;
         height: 2rem;
-        @include mixins.flexCenter;
+        @include mixins.flexPosition(center);
         color: global.$tertiary;
         animation: quatorspin 1s ease-in;
       }
@@ -155,7 +155,7 @@ main{
 }
 
 .order{
-  @include mixins.flexCenter;
+  @include mixins.flexPosition(center);
 }
 
 /**********Footer*************/
@@ -186,7 +186,7 @@ footer{
 
 @media screen and (min-width: 992px){
     .flex{
-    @include mixins.flexCenter;
+    @include mixins.flexPosition(center);
     padding: 30px 70px;
       .ustensil{
         font-size: global.$fontSizeSmall;

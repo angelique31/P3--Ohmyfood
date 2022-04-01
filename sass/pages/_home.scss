@@ -1,7 +1,7 @@
 /*********page loader*******/
 .loader{
   position: fixed;
-  @include mixins.flexCenter;
+  @include mixins.flexPosition(center);
   background-color: global.$white;
   height: 100vh;
   inset: 0;
@@ -31,7 +31,7 @@ h1{
 
 /********Map********/
 .map{
-  @include mixins.flexCenter;
+  @include mixins.flexPosition(center);
    background: global.$darkgrey;
    width: 100%;
    height: 60px;
@@ -107,7 +107,7 @@ li{
       width: 25px;
       background-color: global.$primary;
       border-radius: 50%;
-      @include mixins.flexCenter;
+      @include mixins.flexPosition(center);
       position: absolute;
       left: -15px;
     }
@@ -126,9 +126,7 @@ li{
 
 @media screen and (min-width: 950px){
   .choice ol{
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
+    @include mixins.flexPosition(space-evenly);
   }
 }
 
@@ -161,7 +159,7 @@ li{
               margin: 0 20px;
             }
               &--bordureMenu{
-                  border: 2px solid;
+                  border: 2px solid global.$white;
                   border-radius: 20px;
                   @include mixins.boxShadowLight;
                   background-color: global.$white;
@@ -272,7 +270,7 @@ footer{
 
 @media screen and (min-width: 950px){
   .flex{
-    @include mixins.flexCenter;
+    @include mixins.flexPosition(center);
     padding: 30px 70px;
       .ustensil{
         font-size: global.$fontSizeSmall;
