@@ -82,13 +82,12 @@ h1{
 }
 
 li{
-  display: flex;
-  align-items: center;
+  @include mixins.flexCenter;
   padding: 30px;
   margin: 30px;
   background-color: global.$grey;
   border-radius: 30px;
-  @include mixins.boxShadow;
+  box-shadow: global.$boxShadow;
   position: relative;
   cursor: pointer;
   transition: 0.5s;
@@ -98,7 +97,7 @@ li{
   }
     &:hover{
       opacity:0.7;
-      @include mixins.boxShadowDarken;
+      box-shadow: global.$boxShadowDarken;
       background-color: global.$secondaryLight
     }
     span {
@@ -149,19 +148,17 @@ li{
         }
       }
       &__flex{
-          display: flex;
-          justify-content: center;
+          @include mixins.flexCenter;
           flex-wrap: wrap;
           @media screen and (min-width: 950px){
-              display: flex;
-              justify-content: center;
+              @include mixins.flexCenter;
               flex-wrap: nowrap;
               margin: 0 20px;
             }
               &--bordureMenu{
                   border: 2px solid global.$white;
                   border-radius: 20px;
-                  @include mixins.boxShadowLight;
+                  box-shadow: global.$boxShadowLight;
                   background-color: global.$white;
                   width: 90%;
                   height: 240px;
@@ -239,8 +236,7 @@ footer{
         }
       }
     .ustensil{
-        display: flex;
-        align-items: center;
+        @include mixins.flexCenter;
         margin-bottom: 5px;
         p{
           margin-left: 15px;
@@ -248,8 +244,7 @@ footer{
         }
        }
      .hands{
-         display: flex;
-         align-items: center;
+         @include mixins.flexCenter;
          margin-bottom: 5px;
          p{
            margin-left: 15px;

@@ -13,6 +13,9 @@
   $font1 :'Shrikhand', cursive, sans-serif;
   $font2 : "Roboto", sans-serif;
 
+  body {
+    font-family: $font2;
+  }
   /********Dimensions******/
   $sizeHeart: 25px;
   
@@ -42,11 +45,10 @@
   $tertiary:#99E2D0;
   $tertiaryDarken: #249f80;
   
-  
-  body {
-    font-family: $font2;
-  }
-  
-
+  /**********box-shadow*****/
+   $boxShadow: 5px 5px 5px rgba(0, 0, 0, 0.212);
+   $boxShadowDarken: 5px 5px 5px rgba(0, 0, 0, 0.445);
+   $boxShadowLight: 7px 8px 7px rgb(223, 220, 220);
+    
 
   

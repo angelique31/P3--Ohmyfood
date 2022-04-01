@@ -63,7 +63,7 @@ main{
           -webkit-background-clip: text;
           @include mixins.heartPosition;
           font-size: global.$sizeHeart;
-          transition:all 1500ms ease-in-out;
+          transition: all 1500ms ease-in-out;
           opacity: 0;
           cursor: pointer;
               &:hover{
@@ -100,7 +100,7 @@ main{
   display: flex;
   overflow: hidden;
   border-radius: 16px;
-  @include mixins.boxShadow;
+  box-shadow: global.$boxShadow;
   background-color: global.$white;
   margin: 20px;
   cursor: pointer;
@@ -175,12 +175,10 @@ footer{
       }
     }
     .ustensil{
-      display: flex;
-      align-items: center;
+      @include mixins.flexCenter;
     }
       .hands{
-      display: flex;
-      align-items: center;
+      @include mixins.flexCenter;
     }
 }
 

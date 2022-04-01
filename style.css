@@ -10,14 +10,14 @@
 
 /***********************VARIABLES******************/
 /********font family*****/
-/********Dimensions******/
-/********font weight*******/
-/*********Font-size********/
-/*******colors******/
 body {
   font-family: "Roboto", sans-serif;
 }
 
+/********Dimensions******/
+/********font weight*******/
+/*********Font-size********/
+/*******colors******/
 /**********box-shadow*****/
 /*******page loader*******/
 @keyframes disappear {
@@ -260,13 +260,13 @@ li p {
 }
 .picture__flex {
   display: flex;
-  justify-content: center;
+  align-items: center;
   flex-wrap: wrap;
 }
 @media screen and (min-width: 950px) {
   .picture__flex {
     display: flex;
-    justify-content: center;
+    align-items: center;
     flex-wrap: nowrap;
     margin: 0 20px;
   }

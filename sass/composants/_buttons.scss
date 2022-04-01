@@ -8,9 +8,9 @@ button{
     background: linear-gradient(global.$secondary,global.$primary);
     cursor: pointer;
     transition: 1s;
-    @include mixins.boxShadow;
+    box-shadow: global.$boxShadow;
       &:hover{
         opacity: 0.8;
-        @include mixins.boxShadowDarken;
+        box-shadow: global.$boxShadowDarken;
       }
   }
