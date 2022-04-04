@@ -1,0 +1,28 @@
+header{
+    .logo{
+      height: 40px;
+      text-align: center;
+      padding: 10px 30px 0 0;
+      position: relative;
+  
+      .arrow{
+        position: absolute;
+        top: 15px;
+        margin-left: 30px;
+        font-size: 20px;
+        color: global.$black;
+        @media screen and (min-width:992px){
+          top:35px;
+          font-size: 30px;
+        }
+      }
+        h1{
+            text-align: center;
+            color: global.$black;
+            font-size: global.$fontSizeTitle;
+            @media screen and (min-width:992px) {
+            font-size: 3rem;
+            }
+        }
+    } 
+}

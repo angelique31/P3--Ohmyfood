@@ -1,0 +1,79 @@
+
+footer{
+    background-color: global.$black;
+    height: 240px;
+    color: global.$white;
+    padding: 20px 0 0 20px;
+    @media screen and (min-width: 950px){
+        display: flex;
+      }
+      h5{
+        font-size: global.$fontSizeSmall;
+        font-family: global.$font1;
+        padding: 30px 0;
+        @media screen and (min-width: 950px){
+            font-size: global.$fontSizeSmall;
+            margin: 20px 0;
+          }
+        }
+      .ustensil{
+          @include mixins.flexCenter;
+          margin-bottom: 5px;
+          p{
+            margin-left: 15px;
+            cursor: pointer;
+          }
+         }
+       .hands{
+           @include mixins.flexCenter;
+           margin-bottom: 5px;
+           p{
+             margin-left: 15px;
+             cursor: pointer;
+            }
+         }
+   
+       a{ 
+         color: global.$white;
+         text-decoration: none;
+         cursor: pointer;
+        }
+       p{
+         margin-bottom: 5px;
+         cursor: pointer;
+      }
+  }
+  
+  @media screen and (min-width: 950px){
+    .flex{
+      @include mixins.flexPosition(center);
+      padding: 30px 70px;
+        .ustensil{
+          font-size: global.$fontSizeSmall;
+          gap:  5px;
+          p{
+            margin: 0 50px 5px;
+            font-size: global.$fontSizeSmall;
+          }
+        }
+        .hands{
+          font-size: global.$fontSizeSmall;
+          gap: 5px;
+          p{
+            margin: 0 40px 5px;
+            font-size: global.$fontSizeSmall;
+          }
+        }
+        a{
+          font-size: global.$fontSizeSmall;
+        }
+        p{
+          margin-left: 40px;
+          font-size: global.$fontSizeSmall;
+          &:nth-child(3){
+            margin-right: 40px;
+          }
+        }
+    }
+  }
+  

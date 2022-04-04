@@ -1,33 +1,4 @@
-  /*******Navigation bar******/
-  header{
-    .logo{
-      height: 40px;
-      text-align: center;
-      padding: 10px 30px 0 0;
-      position: relative;
   
-      .arrow{
-        position: absolute;
-        top: 15px;
-        margin-left: 30px;
-        font-size: 20px;
-        color: global.$black;
-        @media screen and (min-width:992px){
-          top:35px;
-          font-size: 30px;
-        }
-      }
-        h1{
-        text-align: center;
-        color: global.$black;
-        font-size: global.$fontSizeTitle;
-        @media screen and (min-width:992px) {
-          font-size: 3rem;
-        }
-    }
-  } 
-}
-
 /************Menu***********/
 main{
   background-color: global.$grey;
@@ -96,6 +67,7 @@ main{
 }
 
 /********menu avec animation check*******/
+
 .menu-item{
   display: flex;
   overflow: hidden;
@@ -158,61 +130,5 @@ main{
   @include mixins.flexPosition(center);
 }
 
-/**********Footer*************/
-footer{
-  background-color: global.$blackLight;
-  height: 300px;
-  color: global.$white;
-  padding-left: 20px;
-  @media screen and (min-width: 992px){
-      display: flex;
-    }
-    h5{
-      font-size: global.$fontSizeTitle;
-      @media screen and (min-width: 992px){
-        font-size: global.$fontSizeSmall;
-        margin: 20px 0;
-      }
-    }
-    .ustensil{
-      @include mixins.flexCenter;
-    }
-      .hands{
-      @include mixins.flexCenter;
-    }
-}
 
-@media screen and (min-width: 992px){
-    .flex{
-    @include mixins.flexPosition(center);
-    padding: 30px 70px;
-      .ustensil{
-        font-size: global.$fontSizeSmall;
-        gap:  5px;
-        p{
-          margin-right: 50px;
-          font-size: global.$fontSizeSmall;
-          margin-left: 5px;
-        }
-      }
-      .hands{
-        font-size: global.$fontSizeSmall;
-        gap: 5px;
-        p{
-          margin-right: 40px;
-          font-size: global.$fontSizeSmall;
-          margin-left: 5px;
-        }
-      }
-      a{
-        font-size: global.$fontSizeSmall;
-      }
-      p{
-        margin-left: 40px;
-        font-size: global.$fontSizeSmall;
-        &:nth-child(3){
-          margin-right: 40px;
-        }
-      }
-  }
-}
+

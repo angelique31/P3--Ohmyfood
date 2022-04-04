@@ -88,7 +88,7 @@ button {
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.212);
 }
 button:hover {
-  opacity: 0.8;
+  opacity: 0.7;
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.445);
 }
 
@@ -182,7 +182,7 @@ h1 {
   }
 }
 
-li {
+.choice li {
   display: flex;
   align-items: center;
   padding: 30px;
@@ -195,17 +195,17 @@ li {
   transition: 0.5s;
 }
 @media screen and (min-width: 950px) {
-  li {
+  .choice li {
     padding: 20px 50px;
     font-size: 1.2rem;
   }
 }
-li:hover {
+.choice li:hover {
   opacity: 0.7;
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.445);
   background-color: #efd8fc;
 }
-li span {
+.choice li span {
   color: white;
   height: 25px;
   width: 25px;
@@ -217,14 +217,14 @@ li span {
   position: absolute;
   left: -15px;
 }
-li .fa-mobile-alt, li .fa-list-ul, li .fa-store {
+.choice li .fa-mobile-alt, .choice li .fa-list-ul, .choice li .fa-store {
   margin-right: 15px;
   font-size: 20px;
 }
-li .fa-mobile-alt:hover, li .fa-list-ul:hover, li .fa-store:hover {
+.choice li .fa-mobile-alt:hover, .choice li .fa-list-ul:hover, .choice li .fa-store:hover {
   color: #6d36af;
 }
-li p {
+.choice li p {
   font-size: 1.2rem;
 }
 
@@ -333,122 +333,6 @@ li p {
 .picture .heart__fas:hover {
   background-image: linear-gradient(#FF79DA, #9356DC);
   opacity: 1;
-}
-
-/*******Footer******/
-footer {
-  background-color: black;
-  height: 240px;
-  color: white;
-  padding: 20px 0 0 20px;
-}
-@media screen and (min-width: 950px) {
-  footer {
-    display: flex;
-  }
-}
-footer h5 {
-  font-size: 1.2rem;
-  font-family: "Shrikhand", cursive, sans-serif;
-  padding: 30px 0;
-}
-@media screen and (min-width: 950px) {
-  footer h5 {
-    font-size: 1.2rem;
-    margin: 20px 0;
-  }
-}
-footer .ustensil {
-  display: flex;
-  align-items: center;
-  margin-bottom: 5px;
-}
-footer .ustensil p {
-  margin-left: 15px;
-  cursor: pointer;
-}
-footer .hands {
-  display: flex;
-  align-items: center;
-  margin-bottom: 5px;
-}
-footer .hands p {
-  margin-left: 15px;
-  cursor: pointer;
-}
-footer a {
-  color: white;
-  text-decoration: none;
-  cursor: pointer;
-}
-footer p {
-  margin-bottom: 5px;
-  cursor: pointer;
-}
-
-@media screen and (min-width: 950px) {
-  .flex {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 30px 70px;
-  }
-  .flex .ustensil {
-    font-size: 1.2rem;
-    gap: 5px;
-  }
-  .flex .ustensil p {
-    margin: 0 50px 5px;
-    font-size: 1.2rem;
-  }
-  .flex .hands {
-    font-size: 1.2rem;
-    gap: 5px;
-  }
-  .flex .hands p {
-    margin: 0 40px 5px;
-    font-size: 1.2rem;
-  }
-  .flex a {
-    font-size: 1.2rem;
-  }
-  .flex p {
-    margin-left: 40px;
-    font-size: 1.2rem;
-  }
-  .flex p:nth-child(3) {
-    margin-right: 40px;
-  }
-}
-/*******Navigation bar******/
-header .logo {
-  height: 40px;
-  text-align: center;
-  padding: 10px 30px 0 0;
-  position: relative;
-}
-header .logo .arrow {
-  position: absolute;
-  top: 15px;
-  margin-left: 30px;
-  font-size: 20px;
-  color: black;
-}
-@media screen and (min-width: 992px) {
-  header .logo .arrow {
-    top: 35px;
-    font-size: 30px;
-  }
-}
-header .logo h1 {
-  text-align: center;
-  color: black;
-  font-size: 1.5rem;
-}
-@media screen and (min-width: 992px) {
-  header .logo h1 {
-    font-size: 3rem;
-  }
 }
 
 /************Menu***********/
@@ -595,22 +479,53 @@ main .bordureMenu .heart__fas:hover {
   align-items: center;
 }
 
-/**********Footer*************/
-footer {
-  background-color: #444343;
-  height: 300px;
-  color: white;
-  padding-left: 20px;
+header .logo {
+  height: 40px;
+  text-align: center;
+  padding: 10px 30px 0 0;
+  position: relative;
+}
+header .logo .arrow {
+  position: absolute;
+  top: 15px;
+  margin-left: 30px;
+  font-size: 20px;
+  color: black;
 }
 @media screen and (min-width: 992px) {
+  header .logo .arrow {
+    top: 35px;
+    font-size: 30px;
+  }
+}
+header .logo h1 {
+  text-align: center;
+  color: black;
+  font-size: 1.5rem;
+}
+@media screen and (min-width: 992px) {
+  header .logo h1 {
+    font-size: 3rem;
+  }
+}
+
+footer {
+  background-color: black;
+  height: 240px;
+  color: white;
+  padding: 20px 0 0 20px;
+}
+@media screen and (min-width: 950px) {
   footer {
     display: flex;
   }
 }
 footer h5 {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
+  font-family: "Shrikhand", cursive, sans-serif;
+  padding: 30px 0;
 }
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 950px) {
   footer h5 {
     font-size: 1.2rem;
     margin: 20px 0;
@@ -619,13 +534,32 @@ footer h5 {
 footer .ustensil {
   display: flex;
   align-items: center;
+  margin-bottom: 5px;
+}
+footer .ustensil p {
+  margin-left: 15px;
+  cursor: pointer;
 }
 footer .hands {
   display: flex;
   align-items: center;
+  margin-bottom: 5px;
+}
+footer .hands p {
+  margin-left: 15px;
+  cursor: pointer;
+}
+footer a {
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+}
+footer p {
+  margin-bottom: 5px;
+  cursor: pointer;
 }
 
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 950px) {
   .flex {
     display: flex;
     justify-content: center;
@@ -637,18 +571,16 @@ footer .hands {
     gap: 5px;
   }
   .flex .ustensil p {
-    margin-right: 50px;
+    margin: 0 50px 5px;
     font-size: 1.2rem;
-    margin-left: 5px;
   }
   .flex .hands {
     font-size: 1.2rem;
     gap: 5px;
   }
   .flex .hands p {
-    margin-right: 40px;
+    margin: 0 40px 5px;
     font-size: 1.2rem;
-    margin-left: 5px;
   }
   .flex a {
     font-size: 1.2rem;
