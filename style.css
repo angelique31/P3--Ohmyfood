@@ -98,36 +98,6 @@ h1 {
   font-family: "Shrikhand", cursive, sans-serif;
 }
 
-/********Map********/
-.map {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: #e6e0e0;
-  width: 100%;
-  height: 60px;
-}
-.map i {
-  font-size: 18px;
-  margin-left: 30px;
-}
-.map input {
-  border: transparent;
-  background: #e6e0e0;
-  padding: 8px 10px;
-  margin-left: 10px;
-  cursor: pointer;
-}
-.map input::placeholder {
-  color: black;
-  font-weight: 600;
-  font-size: 1rem;
-  font-family: "Roboto", sans-serif;
-}
-.map input:focus {
-  outline: none;
-}
-
 /*********Discover********/
 .discover {
   text-align: center;
@@ -604,6 +574,35 @@ footer p {
   border-left: 5px solid #99E2D0;
   border-radius: 50%;
   animation: spin 1s infinite linear;
+}
+
+.map {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #e6e0e0;
+  width: 100%;
+  height: 60px;
+}
+.map i {
+  font-size: 18px;
+  margin-left: 30px;
+}
+.map input {
+  border: transparent;
+  background: #e6e0e0;
+  padding: 8px 10px;
+  margin-left: 10px;
+  cursor: pointer;
+}
+.map input::placeholder {
+  color: black;
+  font-weight: 600;
+  font-size: 1rem;
+  font-family: "Roboto", sans-serif;
+}
+.map input:focus {
+  outline: none;
 }
 
 /*# sourceMappingURL=style.css.map */
