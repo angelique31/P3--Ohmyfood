@@ -27,6 +27,9 @@ h1{
         font-size: 1rem;
         font-family: global.$font2;
       }
+      &:focus{
+        outline: none;
+      }
     }
 }
 

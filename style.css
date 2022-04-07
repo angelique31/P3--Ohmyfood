@@ -124,6 +124,9 @@ h1 {
   font-size: 1rem;
   font-family: "Roboto", sans-serif;
 }
+.map input:focus {
+  outline: none;
+}
 
 /*********Discover********/
 .discover {
