@@ -50,7 +50,7 @@ body {
     transform: rotate(360deg);
   }
 }
-/*animation pour faire apparaitre progressivement les menus*/
+/*animation to make appear gradually menus*/
 @keyframes appear {
   0% {
     transform: scale(0);
@@ -92,32 +92,6 @@ button:hover {
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.445);
 }
 
-/*********page loader*******/
-.loader {
-  position: fixed;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: white;
-  height: 100vh;
-  inset: 0;
-  z-index: 1;
-  opacity: 0.9;
-  animation: disappear 2s forwards 2s;
-  transform-origin: top;
-}
-.loader::after {
-  content: "";
-  height: 100px;
-  width: 100px;
-  border-top: 5px solid #FF79DA;
-  border-bottom: 5px solid #9356DC;
-  border-right: 5px solid #99E2D0;
-  border-left: 5px solid #99E2D0;
-  border-radius: 50%;
-  animation: spin 1s infinite linear;
-}
-
 /*******Title******/
 h1 {
   text-align: center;
@@ -133,11 +107,22 @@ h1 {
   width: 100%;
   height: 60px;
 }
-.map p {
-  padding: 8px 20px;
-  font-weight: 900;
-  font-size: 1.2rem;
+.map i {
+  font-size: 18px;
+  margin-left: 30px;
+}
+.map input {
+  border: transparent;
+  background: #e6e0e0;
+  padding: 8px 10px;
+  margin-left: 10px;
   cursor: pointer;
+}
+.map input::placeholder {
+  color: black;
+  font-weight: 600;
+  font-size: 1rem;
+  font-family: "Roboto", sans-serif;
 }
 
 /*********Discover********/
@@ -412,7 +397,7 @@ main .bordureMenu .heart__fas:hover {
   color: #847f7f;
 }
 
-/********menu avec animation check*******/
+/********menu with animation check*******/
 .menu-item {
   display: flex;
   overflow: hidden;
@@ -592,6 +577,30 @@ footer p {
   .flex p:nth-child(3) {
     margin-right: 40px;
   }
+}
+.loader {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  height: 100vh;
+  inset: 0;
+  z-index: 1;
+  opacity: 0.9;
+  animation: disappear 2s forwards 2s;
+  transform-origin: top;
+}
+.loader::after {
+  content: "";
+  height: 100px;
+  width: 100px;
+  border-top: 5px solid #FF79DA;
+  border-bottom: 5px solid #9356DC;
+  border-right: 5px solid #99E2D0;
+  border-left: 5px solid #99E2D0;
+  border-radius: 50%;
+  animation: spin 1s infinite linear;
 }
 
 /*# sourceMappingURL=style.css.map */
