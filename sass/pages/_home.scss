@@ -5,7 +5,6 @@ h1{
   font-family: global.$font1;
 }
 
-
 /*********Discover********/
 .discover{
   text-align: center;
@@ -29,18 +28,11 @@ h1{
 .choice{
   background-color: global.$white;
   height: 420px;
-  @media screen and (min-width: 950px){
-    height: 350px;  
-  }
   &__title{
     font-size: global.$fontSizeTitle;
     font-weight: global.$bolder;
     margin: 0 15px 30px;
     padding-top: 20px;
-    @media screen and (min-width: 950px){
-      text-align: center;
-      font-size: 2rem;
-    }
   }
 }
 
@@ -54,10 +46,6 @@ h1{
   position: relative;
   cursor: pointer;
   transition: 0.5s;
-  @media screen and (min-width: 950px){
-    padding: 20px 50px;
-    font-size: global.$fontSizeSmall;
-  }
     &:hover{
       opacity:0.7;
       box-shadow: global.$boxShadowDarken;
@@ -83,55 +71,34 @@ h1{
     p{
       font-size: global.$fontSizeSmall;
     }
-
-}
-
-@media screen and (min-width: 950px){
-  .choice ol{
-    @include mixins.flexPosition(space-evenly);
-  }
 }
 
 /***********Menu card*********/
 .picture{
   background-color: global.$grey;
   height: 1200px;
-  @media screen and (min-width: 950px){
-      height: 700px;
-    }
       &__title{
         padding-top: 50px;
         font-size: global.$fontSizeTitle;
         margin: 0 30px 30px 15px;
-        @media screen and (min-width: 950px){
-          text-align: center;
-          font-size: 2rem;
-          padding-top: 0;
-          margin-bottom: 70px;
-        }
       }
       &__flex{
           @include mixins.flexCenter;
           flex-wrap: wrap;
-          @media screen and (min-width: 950px){
-              @include mixins.flexCenter;
-              flex-wrap: nowrap;
-              margin: 0 20px;
+          &--bordureMenu{
+            border: 2px solid global.$white;
+            border-radius: 20px;
+            box-shadow: global.$boxShadowLight;
+            background-color: global.$white;
+            width: 90%;
+            height: 240px;
+            margin: 0 20px 20px 10px;
+            position: relative;
+            cursor: pointer;
+            .image1, .image2, .image3, .image4{
+            @include mixins.imageSize;
             }
-              &--bordureMenu{
-                  border: 2px solid global.$white;
-                  border-radius: 20px;
-                  box-shadow: global.$boxShadowLight;
-                  background-color: global.$white;
-                  width: 90%;
-                  height: 240px;
-                  margin: 0 20px 20px 10px;
-                  position: relative;
-                  cursor: pointer;
-                  .image1, .image2, .image3, .image4{
-                    @include mixins.imageSize;
-                  }
-              }  
+          }  
       }
 }
 /*******card new on the menu card*******/
@@ -179,8 +146,40 @@ h1{
     }    
 }  
                  
+/*************Responsive************/
 
-
+  @media screen and (min-width: 950px){
+    .choice{
+    height: 350px;  
+    &__title{
+      text-align: center;
+      font-size: 2rem;
+    }
+  }
+    .choice li{
+      padding: 20px 50px;
+      font-size: global.$fontSizeSmall;
+    }
+   
+    .choice ol{
+      @include mixins.flexPosition(space-evenly);
+    }
+    .picture{
+      height: 700px;
+      &__title{
+        text-align: center;
+        font-size: 2rem;
+        padding-top: 0;
+        margin-bottom: 70px;
+      }
+      &__flex{
+        @include mixins.flexCenter;
+        flex-wrap: nowrap;
+        margin: 0 20px;
+      }
+      
+    }
+}
 
 
 

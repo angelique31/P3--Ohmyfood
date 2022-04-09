@@ -3,9 +3,7 @@
 main{
   background-color: global.$grey;
   margin-top: 20px;
-  @media screen and (min-width:992px){
-      margin-top: 60px;
-  }
+ 
   .picture{
     @include mixins.imageSizeBig;
   }               
@@ -50,10 +48,6 @@ main{
   display: grid;
   grid-template-columns: 1fr;
   width: 100%;
-  @media screen and (min-width:992px){
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-  }
   .menu-category{
     overflow: hidden;
       h3{
@@ -130,5 +124,14 @@ main{
   @include mixins.flexPosition(center);
 }
 
-
+/******************Responsive******************/
+@media screen and (min-width:992px){
+  Main{
+    margin-top: 60px;
+  }
+  .menu{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
 

@@ -122,22 +122,11 @@ h1 {
   background-color: white;
   height: 420px;
 }
-@media screen and (min-width: 950px) {
-  .choice {
-    height: 350px;
-  }
-}
 .choice__title {
   font-size: 1.5rem;
   font-weight: 900;
   margin: 0 15px 30px;
   padding-top: 20px;
-}
-@media screen and (min-width: 950px) {
-  .choice__title {
-    text-align: center;
-    font-size: 2rem;
-  }
 }
 
 .choice li {
@@ -151,12 +140,6 @@ h1 {
   position: relative;
   cursor: pointer;
   transition: 0.5s;
-}
-@media screen and (min-width: 950px) {
-  .choice li {
-    padding: 20px 50px;
-    font-size: 1.2rem;
-  }
 }
 .choice li:hover {
   opacity: 0.7;
@@ -186,48 +169,20 @@ h1 {
   font-size: 1.2rem;
 }
 
-@media screen and (min-width: 950px) {
-  .choice ol {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-  }
-}
 /***********Menu card*********/
 .picture {
   background-color: #f5f3f3;
   height: 1200px;
-}
-@media screen and (min-width: 950px) {
-  .picture {
-    height: 700px;
-  }
 }
 .picture__title {
   padding-top: 50px;
   font-size: 1.5rem;
   margin: 0 30px 30px 15px;
 }
-@media screen and (min-width: 950px) {
-  .picture__title {
-    text-align: center;
-    font-size: 2rem;
-    padding-top: 0;
-    margin-bottom: 70px;
-  }
-}
 .picture__flex {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
-}
-@media screen and (min-width: 950px) {
-  .picture__flex {
-    display: flex;
-    align-items: center;
-    flex-wrap: nowrap;
-    margin: 0 20px;
-  }
 }
 .picture__flex--bordureMenu {
   border: 2px solid white;
@@ -293,15 +248,47 @@ h1 {
   opacity: 1;
 }
 
+/*************Responsive************/
+@media screen and (min-width: 950px) {
+  .choice {
+    height: 350px;
+  }
+  .choice__title {
+    text-align: center;
+    font-size: 2rem;
+  }
+
+  .choice li {
+    padding: 20px 50px;
+    font-size: 1.2rem;
+  }
+
+  .choice ol {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+
+  .picture {
+    height: 700px;
+  }
+  .picture__title {
+    text-align: center;
+    font-size: 2rem;
+    padding-top: 0;
+    margin-bottom: 70px;
+  }
+  .picture__flex {
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    margin: 0 20px;
+  }
+}
 /************Menu***********/
 main {
   background-color: #f5f3f3;
   margin-top: 20px;
-}
-@media screen and (min-width: 992px) {
-  main {
-    margin-top: 60px;
-  }
 }
 main .picture {
   object-fit: cover;
@@ -352,12 +339,6 @@ main .bordureMenu .heart__fas:hover {
   display: grid;
   grid-template-columns: 1fr;
   width: 100%;
-}
-@media screen and (min-width: 992px) {
-  .menu {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-  }
 }
 .menu .menu-category {
   overflow: hidden;
@@ -437,6 +418,17 @@ main .bordureMenu .heart__fas:hover {
   align-items: center;
 }
 
+/******************Responsive******************/
+@media screen and (min-width: 992px) {
+  Main {
+    margin-top: 60px;
+  }
+
+  .menu {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
 header .logo {
   height: 40px;
   text-align: center;
