@@ -201,6 +201,9 @@ h1 {
   height: 170px;
   border-radius: 20px 20px 0 0;
 }
+.picture .textImage {
+  margin: 10px 0 0 10px;
+}
 
 /*******card new on the menu card*******/
 .picture .new {
