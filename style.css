@@ -60,19 +60,19 @@ body {
   }
 }
 .menu-item {
-  animation: appear 0.6s;
+  animation: appear 1s;
 }
 
 .delay-1 {
-  animation-delay: 0.1s;
+  animation-delay: 0.4s;
 }
 
 .delay-2 {
-  animation-delay: 0.2s;
+  animation-delay: 0.6s;
 }
 
 .delay-3 {
-  animation-delay: 0.3s;
+  animation-delay: 0.8s;
 }
 
 button {
@@ -81,7 +81,7 @@ button {
   border: transparent;
   color: white;
   font-weight: 500;
-  font-size: 15px;
+  font-size: 0.9rem;
   background: linear-gradient(#FF79DA, #9356DC);
   cursor: pointer;
   transition: 1s;
@@ -580,7 +580,7 @@ footer p {
   height: 60px;
 }
 .map i {
-  font-size: 18px;
+  font-size: 1.1rem;
   margin-left: 30px;
 }
 .map input {
