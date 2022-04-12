@@ -481,7 +481,9 @@ footer h5 {
 @media screen and (min-width: 950px) {
   footer h5 {
     font-size: 1.2rem;
-    margin: 20px 0;
+    padding: 0;
+    margin-top: 95px;
+    margin-left: 10px;
   }
 }
 footer .ustensil {
