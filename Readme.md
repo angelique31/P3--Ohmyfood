@@ -58,4 +58,4 @@ décalage dans le temps.
  Le visiteur peut ajouter les plats qu'il souhaite à sa commande en cliquant dessus.
 Cela fait apparaître une __petite coche à droite du plat__.    
 
-### __Pour voir le résultat, venez visiter mon site : https://angelique31.github.io/projet3-ohmyfood/  et amusez vous à tester le projet.__
+### __Pour voir le résultat, venez visiter mon site : https://angelique31.github.io/P3--Ohmyfood/ 
